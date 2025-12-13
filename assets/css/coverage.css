@@ -258,3 +258,89 @@
         min-height: auto;
     }
 }
+
+/*--------------------------------------------------------------
+# Head Office Map Styles
+--------------------------------------------------------------*/
+/* Container styling for a card-like look */
+.head-office-map-container {
+    border: 1px solid #dee2e6;
+    border-radius: 8px; /* Smooth corners */
+    overflow: hidden; /* Ensures the border radius is applied to the iframe */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    height: 100%; /* Ensure it fills the col-lg-6 height on desktop */
+}
+
+/* Custom styles to ensure the map maintains aspect ratio on mobile */
+.map-responsive {
+    overflow: hidden;
+    /* Use padding-bottom for a 4:3 aspect ratio on small screens */
+    padding-bottom: 75%; 
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* On larger screens (desktop), set a fixed, desirable height */
+@media (min-width: 992px) {
+    .map-responsive {
+        padding-bottom: 0; 
+        height: 400px; /* Set a specific height */
+    }
+    /* Ensure the Head Office text area is consistent */
+    .head-office-map-container .p-3 {
+        min-height: 80px; /* Give it a minimum height to look proportional */
+    }
+}
+
+/*
+=====================================================
+  MOBILE RESPONSIVENESS ADJUSTMENTS (MAX-WIDTH: 768px)
+=====================================================
+*/
+@media (max-width: 768px) {
+    /* 1. Ensure the main section has less top padding on mobile */
+    #coverage-hero {
+        padding: 80px 0 40px 0; /* Reduced top/bottom padding for mobile screens */
+        height: auto; /* Allow height to adapt to content */
+    }
+
+    /* 2. Fix the Heading Text Size */
+    #coverage-hero h1 {
+        font-size: 36px; /* Smaller main heading */
+    }
+
+    #coverage-hero h2 {
+        font-size: 18px; /* Smaller sub-heading */
+        margin-bottom: 20px;
+    }
+
+    /* 3. Force the Input and Button to Stack (Crucial Fix) */
+    .coverage-search-box .input-group {
+        /* This forces the flex items (input and button) to stack vertically */
+        flex-direction: column;
+    }
+
+    /* 4. Ensure the Input Field Looks Correct */
+    .coverage-search-box .coverage-input {
+        /* Ensure input takes full width */
+        width: 100% !important; 
+        /* Reset any border radius inherited from the input-group on the right side */
+        border-radius: var(--bs-border-radius, 0.375rem); 
+        /* Add some space below the input before the button stacks */
+        margin-bottom: 10px;
+    }
+    
+    /* 5. Force the Button to Full Width */
+    .coverage-search-box .coverage-btn {
+        width: 100%; /* Make the button full width */
+        margin-left: 0 !important; /* Remove any inline margin */
+    }
+}

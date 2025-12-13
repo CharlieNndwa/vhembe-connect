@@ -4625,3 +4625,18 @@ hides the topbar when scrolled:
         margin-top: -60px !important; 
     }
 }
+
+/*
+ * Ensure the search input field always takes 100% width on all devices.
+ * Apply this to the most specific class or ID of your search input. 
+ */
+.coverage-search-section .form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure the input group or form wrapper doesn't constrain width */
+.coverage-search-section .input-group,
+.coverage-search-section form {
+    width: 100%;
+}

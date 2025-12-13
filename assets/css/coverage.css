@@ -1,0 +1,260 @@
+/*--------------------------------------------------------------
+# Coverage Check Page Styles (coverage.css)
+# Restyled for a cleaner, modern look with clear calls-to-action.
+--------------------------------------------------------------*/
+
+/* ==================
+  1. COVERAGE HERO SECTION (Restyled)
+================== */
+#coverage-hero {
+    width: 100%;
+    /* New: Cleaner, gradient background for a fresh feel */
+    background: linear-gradient(45deg, #37517e 0%, #47b2e4 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 55vh; /* Slightly reduced height */
+    margin-top: 70px;
+    padding: 100px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#coverage-hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#coverage-hero h2 {
+    color: #fff9;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* ==================
+  2. COVERAGE SEARCH BAR STYLING (Restyled)
+================== */
+.coverage-search-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow for prominence */
+}
+
+/* Input Group Styling */
+.coverage-search-box .input-group {
+    height: 60px; /* Taller input for better click target */
+}
+
+/* Input Field */
+.coverage-search-box .coverage-input {
+    border: 2px solid #ddd;
+    border-right: none;
+    border-radius: 10px 0 0 10px !important;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.coverage-search-box .coverage-input:focus {
+    border-color: #47b2e4;
+    box-shadow: 0 0 0 0.25rem rgba(71, 178, 228, 0.1);
+}
+
+/* Search Button */
+.coverage-search-box .coverage-btn {
+    background: #47b2e4;
+    border: 2px solid #47b2e4;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 40px;
+    font-size: 18px;
+    border-radius: 0 10px 10px 0 !important;
+    transition: background 0.3s;
+}
+
+.coverage-search-box .coverage-btn:hover {
+    background: #3498db;
+    border-color: #3498db;
+}
+
+/* Note/Disclaimer Below Search Bar */
+.coverage-note {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #6c757d;
+    text-align: center;
+}
+
+.coverage-note i {
+    color: #47b2e4;
+    margin-right: 5px;
+}
+
+
+/* ==================
+  3. RESULTS & NEXT STEPS STYLING
+================== */
+.coverage-results {
+    padding: 60px 0;
+    background: #f8f9fa; /* Light grey background for section separation */
+}
+
+.coverage-results .info-box {
+    padding: 25px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    min-height: 220px; /* Larger result box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.coverage-results .info-box h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 10px;
+}
+
+.coverage-results .info-box p {
+    font-size: 16px;
+    color: #5e6c84;
+}
+
+/* Icon Styling */
+.coverage-results .info-box i {
+    font-size: 32px;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Neutral/Initial State Styles */
+.coverage-results .neutral-box {
+    border-left: 5px solid #6c757d;
+}
+.coverage-results .neutral-icon {
+    color: #6c757d;
+}
+
+/* Success Styles (Coverage Found) */
+.coverage-results .success-box {
+    border-left: 5px solid #28a745; /* Green */
+}
+.coverage-results .success-icon {
+    color: #28a745; 
+}
+
+/* Danger Styles (No Coverage) */
+.coverage-results .info-box-danger {
+    border-left: 5px solid #dc3545; /* Red */
+}
+.coverage-results .danger-icon {
+    color: #dc3545;
+}
+
+/* Warning/Info Styles (Partial/Manual Check) */
+.coverage-results .info-box-warning {
+    border-left: 5px solid #ffc107; /* Yellow/Orange */
+}
+.coverage-results .info-icon {
+    color: #ffc107;
+}
+
+/* New Feature: Coverage Map Placeholder */
+.map-placeholder {
+    background: #e9ecef;
+    min-height: 220px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* New Feature: Next Steps Icon Boxes (Reusing a simple icon-box style) */
+.icon-box-small {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.icon-box-small:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.icon-box-small .icon {
+    margin-bottom: 15px;
+}
+
+.icon-box-small .icon i {
+    font-size: 36px;
+    line-height: 1;
+    color: #47b2e4;
+}
+
+.icon-box-small h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.icon-box-small p {
+    font-size: 15px;
+    color: #6c757d;
+}
+
+.icon-box-small .btn-link {
+    font-weight: 600;
+    color: #47b2e4;
+}
+
+
+/* ==================
+  4. MOBILE RESPONSIVENESS
+================== */
+@media (max-width: 768px) {
+    #coverage-hero {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    #coverage-hero h1 {
+        font-size: 38px;
+    }
+    
+    /* Stack input and button on small screens */
+    .coverage-search-box .input-group {
+        display: flex; 
+        flex-direction: column;
+        height: auto;
+    }
+
+    .coverage-search-box .coverage-input {
+        border-radius: 10px !important; 
+        margin-bottom: 10px;
+        border-right: 2px solid #ddd; /* Re-add right border */
+    }
+
+    .coverage-search-box .coverage-btn {
+        width: 100%;
+        border-radius: 10px !important;
+        padding: 10px 20px;
+    }
+
+    .coverage-results .info-box {
+        min-height: auto;
+    }
+}

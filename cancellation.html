@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Vhembe Connect</title>
+    <meta content="" name="description" />
+    <meta content="" name="Vhembe Connect" />
+
+    <!-- Favicons -->
+    <link href="assets/img/2.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header" class="fixed-top">
+      <section id="topbar" class="d-flex align-items-center">
+        <div
+          class="container d-flex justify-content-center justify-content-md-between"
+        >
+          <div class="contact-info d-flex align-items-center">
+            <i
+              class="bi bi-geo-alt-fill d-none d-lg-flex align-items-center"
+            ></i>
+            <span class="d-none d-lg-flex ms-1 me-4"
+              >Head Office: 1st Floor, 61 Katherine Street, Sandton, 2196</span
+            >
+
+            <i class="bi bi-envelope d-flex align-items-center me-1"></i>
+            <a href="mailto:jrngomane@nbscc.co.za" class="me-4"
+              >E-mail: jrngomane@nbscc.co.za</a
+            >
+
+            <i class="bi bi-phone d-flex align-items-center me-1"></i>
+            <a href="tel:0731824536">Cell: 073 182 4536</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+          <a href="index.html" class="d-flex align-items-center">
+            <img
+              src="assets/img/vhembe.png"
+              alt="Vhembe Connect Logo"
+              class="img-fluid me-2"
+            />
+          </a>
+        </h1>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li>
+              <a class="nav-link scrollto" href="/about-us.html">About Us</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/pricing-packages.html"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/check-coverage.html"
+                >Check Coverage</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/contact-us.html"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a class="btn-get-started scrollto" href="/apply.html">Apply </a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </header>
+    <div style="height: 120px" class="d-block d-lg-none"></div>
+    <div style="height: 130px" class="d-none d-lg-block"></div>
+    <main id="main">
+      <section id="cancellation-form" class="form-section">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="section-heading-spacing">
+                <h1>Cancel Your Service</h1>
+                <p>
+                  Please provide your account details and the reason for your
+                  cancellation request.
+                </p>
+              </div>
+
+              <form
+                method="post"
+                role="form"
+                class="cancellation-form"
+                id="cancellationForm"
+              >
+                <div class="row">
+                  <h3 class="mb-3">Customer Details</h3>
+
+                  <div class="col-lg-12 form-group">
+                    <label for="serviceType">Type *</label>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="serviceType"
+                        id="businessType"
+                        value="Business"
+                        required
+                      />
+                      <label class="form-check-label" for="businessType"
+                        >Business</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="serviceType"
+                        id="residentialType"
+                        value="Residential"
+                      />
+                      <label class="form-check-label" for="residentialType"
+                        >Residential</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 form-group">
+                    <input
+                      type="text"
+                      name="accountNumber"
+                      class="form-control"
+                      id="accountNumber"
+                      placeholder="Existing Account Number (Optional)"
+                    />
+                  </div>
+
+                  <div class="col-lg-6 form-group">
+                    <input
+                      type="text"
+                      name="firstName"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="First Name *"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-lg-6 form-group">
+                    <input
+                      type="text"
+                      name="lastName"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="Last Name *"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-lg-6 form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Email *"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-lg-6 form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="cellPhone"
+                      id="cellPhone"
+                      placeholder="Cell Phone *"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-lg-6 form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="idNumber"
+                      id="idNumber"
+                      placeholder="ID Number *"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-lg-12 form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="address"
+                      id="address"
+                      placeholder="Service Address *"
+                      required
+                    />
+                  </div>
+
+                  <h3 class="mt-4 mb-3">Cancellation Details</h3>
+
+                  <div class="col-lg-12 form-group">
+                    <label for="reason">Reason *</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="reason"
+                        id="reasonRelocating"
+                        value="Relocating (I am relocating to a new location)"
+                        required
+                      />
+                      <label class="form-check-label" for="reasonRelocating"
+                        >Relocating (I am relocating to a new location)</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="reason"
+                        id="reasonAffordability"
+                        value="Affordability (The service is no longer affordable for me)"
+                      />
+                      <label class="form-check-label" for="reasonAffordability"
+                        >Affordability (The service is no longer affordable for
+                        me)</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="reason"
+                        id="reasonBadService"
+                        value="Bad Service (I am not getting the service I am paying for)"
+                      />
+                      <label class="form-check-label" for="reasonBadService"
+                        >Bad Service (I am not getting the service I am paying
+                        for)</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="reason"
+                        id="reasonTakeOver"
+                        value="Take-Over (Someone else is taking over my service)"
+                      />
+                      <label class="form-check-label" for="reasonTakeOver"
+                        >Take-Over (Someone else is taking over my
+                        service)</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="reason"
+                        id="reasonOther"
+                        value="Other"
+                      />
+                      <label class="form-check-label" for="reasonOther"
+                        >Other (I am canceling for another reason)</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 form-group">
+                    <label for="explanation"
+                      >Explanation / Reason / Additional Details</label
+                    >
+                    <textarea
+                      class="form-control"
+                      name="explanation"
+                      id="explanation"
+                      rows="4"
+                      placeholder="Please provide more details about your cancellation."
+                    ></textarea>
+                  </div>
+
+                  <div class="col-lg-12 form-group">
+                    <label for="cancellationDate"
+                      >When to cancel your service *</label
+                    >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="cancellationDate"
+                        id="cancelImmediately"
+                        value="Immediately"
+                        required
+                      />
+                      <label class="form-check-label" for="cancelImmediately"
+                        >Immediately</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="cancellationDate"
+                        id="cancelCurrentMonthEnd"
+                        value="At the end of the current month"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="cancelCurrentMonthEnd"
+                        >At the end of the current month</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="cancellationDate"
+                        id="cancelNextMonthEnd"
+                        value="At the end of next month"
+                      />
+                      <label class="form-check-label" for="cancelNextMonthEnd"
+                        >At the end of next month</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="my-3">
+                <div class="loading">Sending Request...</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your cancellation request has been submitted successfully. We will be in contact shortly.</div>
+              </div> -->
+
+                <div class="text-center">
+                  <button type="submit" class="btn-primary-custom">
+                    Submit Cancellation Request
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-logo-col">
+              <div class="footer-info">
+                <a href="index.html" class="logo-link">
+                  <img
+                    src="assets/img/vhembe.png"
+                    alt="Vhembe Connect Logo"
+                    class="img-fluid footer-logo"
+                  />
+                </a>
+                <div class="social-links mt-4">
+                  <a
+                    href="https://wa.me/27731824536"
+                    target="_blank"
+                    class="whatsapp"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
+                  <a href="#" target="_blank" class="facebook"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a href="#" target="_blank" class="linkedin"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Primary Contact</h4>
+              <ul class="footer-contact-list">
+                <li><i class="bi bi-phone"></i> Cell (24/7): 073 182 4536</li>
+                <li>
+                  <i class="bi bi-envelope"></i> Email: jrngomane@nbscc.co.za
+                </li>
+                <li><i class="bi bi-globe"></i> Web: VhembeConnect.co.za</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Head Office</h4>
+              <p class="footer-address">
+                <strong>VHEMBE CONNECT (PTY) LTD</strong><br />
+                1st Floor, 61 Katherine Street<br />
+                Sandton, 2196<br />
+                South Africa
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Head Office: Limpopo</h4>
+              <p class="footer-address">
+                STAND NUMBER 267<br />
+                BUNGENI VILLAGE<br />
+                NGHONYAMA, LIMPOPO<br />
+                0960, South Africa
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Vhembe Connect</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by
+          <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script>
+      (function () {
+        // !!! IMPORTANT: REPLACE WITH YOUR ACTUAL EMAILJS PUBLIC KEY !!!
+        emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+      })();
+
+      document
+        .getElementById("cancellationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const form = this;
+          const formMessages = form.querySelector(".my-3");
+          const loading = formMessages.querySelector(".loading");
+          const errorMessage = formMessages.querySelector(".error-message");
+          const sentMessage = formMessages.querySelector(".sent-message");
+
+          loading.style.display = "block";
+          errorMessage.style.display = "none";
+          sentMessage.style.display = "none";
+
+          // !!! IMPORTANT: REPLACE 'YOUR_SERVICE_ID' AND 'YOUR_TEMPLATE_ID' !!!
+          emailjs
+            .sendForm("YOUR_SERVICE_ID", "YOUR_CANCELLATION_TEMPLATE_ID", this)
+            .then(
+              function () {
+                loading.style.display = "none";
+                sentMessage.style.display = "block";
+                form.reset(); // Clear form on success
+              },
+              function (error) {
+                loading.style.display = "none";
+                errorMessage.innerHTML =
+                  "Error sending request. Please try again or call us. " +
+                  error.text;
+                errorMessage.style.display = "block";
+              }
+            );
+        });
+    </script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

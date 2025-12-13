@@ -1,0 +1,4627 @@
+/**
+* Template Name: Arsha
+* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #37517e;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #37517e;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #47b2e4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #6bc1e9;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: #fff;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  max-height: 50px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid #47b2e4;
+  font-weight: 600;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #31a9e1;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #000000;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+/* When mobile menu is open */
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(9, 30, 66, 0.9); /* Dark overlay/backdrop */
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #000000; /* FIXED: Ensure the close icon (bi-x) is also black */
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #37517e;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+  color: #37517e;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+  visibility: visible !important;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: #37517e;
+}
+
+#hero .container {
+  padding-top: 72px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+
+#hero .btn-get-started:hover {
+  background: #209dd8;
+}
+
+#hero .btn-watch-video {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin: 10px 0 0 25px;
+  color: #fff;
+  line-height: 1;
+}
+
+#hero .btn-watch-video i {
+  line-height: 0;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+
+#hero .btn-watch-video:hover i {
+  color: #47b2e4;
+}
+
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh;
+    text-align: center;
+  }
+
+  #hero .animated {
+    animation: none;
+  }
+
+  #hero .hero-img {
+    text-align: center;
+  }
+
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #hero .hero-img img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+
+  #hero .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f3f5fa;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+  padding: 12px 0;
+  text-align: center;
+}
+
+.clients img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+  filter: grayscale(100);
+}
+
+.clients img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .clients img {
+    max-width: 40%;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.about .content ul li+li {
+  margin-top: 10px;
+}
+
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #47b2e4;
+  line-height: 1;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .content .btn-learn-more {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #47b2e4;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #47b2e4;
+}
+
+.about .content .btn-learn-more:hover {
+  background: #47b2e4;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+.why-us .content {
+  padding: 60px 100px 0 100px;
+}
+
+.why-us .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+  color: #37517e;
+}
+
+.why-us .content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.why-us .content p {
+  font-size: 15px;
+  color: #848484;
+}
+
+.why-us .img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.why-us .accordion-list {
+  padding: 0 100px 60px 100px;
+}
+
+.why-us .accordion-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.why-us .accordion-list li+li {
+  margin-top: 15px;
+}
+
+.why-us .accordion-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.why-us .accordion-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-right: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.why-us .accordion-list span {
+  color: #47b2e4;
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.why-us .accordion-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.why-us .accordion-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.why-us .accordion-list .icon-show {
+  display: none;
+}
+
+.why-us .accordion-list a.collapsed {
+  color: #343a40;
+}
+
+.why-us .accordion-list a.collapsed:hover {
+  color: #47b2e4;
+}
+
+.why-us .accordion-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.why-us .accordion-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+
+  .why-us .content,
+  .why-us .accordion-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .why-us .img {
+    min-height: 400px;
+  }
+
+  .why-us .content {
+    padding-top: 30px;
+  }
+
+  .why-us .accordion-list {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .why-us .img {
+    min-height: 200px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .content h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #37517e;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills .content ul li {
+  padding-bottom: 10px;
+}
+
+.skills .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #47b2e4;
+}
+
+.skills .content p:last-child {
+  margin-bottom: 0;
+}
+
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #37517e;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #e8edf5;
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #4668a2;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all ease-in-out 0.4s;
+  background: #fff;
+}
+
+.services .icon-box .icon {
+  margin-bottom: 10px;
+}
+
+.services .icon-box .icon i {
+  color: #47b2e4;
+  font-size: 36px;
+  transition: 0.3s;
+}
+
+.services .icon-box h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #37517e;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  transform: translateY(-10px);
+}
+
+.services .icon-box:hover h4 a {
+  color: #47b2e4;
+}
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #fff;
+}
+
+.cta .cta-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cta .cta-btn:hover {
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444444;
+  transition: all 0.3s;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.6s;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  z-index: 3;
+  right: 15px;
+  transition: all 0.3s;
+  background: rgba(55, 81, 126, 0.8);
+  padding: 10px 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #f9fcfe;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #47b2e4;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.15);
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #47b2e4;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #47b2e4;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(55, 81, 126, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.5s;
+  height: 100%;
+}
+
+.team .member .pic {
+  overflow: hidden;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.team .member .pic img {
+  transition: ease-in-out 0.3s;
+}
+
+.team .member:hover {
+  transform: translateY(-10px);
+}
+
+.team .member .member-info {
+  padding-left: 30px;
+}
+
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #37517e;
+}
+
+.team .member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+
+.team .member span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #cbd6e9;
+  bottom: 0;
+  left: 0;
+}
+
+.team .member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.team .member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.team .member .social a {
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #eff2f8;
+}
+
+.team .member .social a i {
+  color: #37517e;
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.team .member .social a:hover {
+  background: #47b2e4;
+}
+
+.team .member .social a:hover i {
+  color: #fff;
+}
+
+.team .member .social a+a {
+  margin-left: 8px;
+}
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.pricing .row {
+  padding-top: 40px;
+}
+
+.pricing .box {
+  padding: 60px 40px;
+  box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
+  background: #fff;
+  height: 100%;
+  border-top: 4px solid #fff;
+  border-radius: 5px;
+}
+
+.pricing h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #37517e;
+}
+
+.pricing h4 {
+  font-size: 48px;
+  color: #37517e;
+  font-weight: 400;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 25px;
+}
+
+.pricing h4 sup {
+  font-size: 28px;
+}
+
+.pricing h4 span {
+  color: #47b2e4;
+  font-size: 18px;
+  display: block;
+}
+
+.pricing ul {
+  padding: 20px 0;
+  list-style: none;
+  color: #999;
+  text-align: left;
+  line-height: 20px;
+}
+
+.pricing ul li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+}
+
+.pricing ul i {
+  color: #28a745;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.pricing ul .na {
+  color: #ccc;
+}
+
+.pricing ul .na i {
+  color: #ccc;
+}
+
+.pricing ul .na span {
+  text-decoration: line-through;
+}
+
+.pricing .buy-btn {
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 50px;
+  color: #47b2e4;
+  transition: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  transition: 0.3s;
+  border: 1px solid #47b2e4;
+}
+
+.pricing .buy-btn:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.pricing .featured {
+  border-top-color: #47b2e4;
+}
+
+.pricing .featured .buy-btn {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.pricing .featured .buy-btn:hover {
+  background: #23a3df;
+}
+
+@media (max-width: 992px) {
+  .pricing .box {
+    max-width: 60%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing .box {
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .pricing .box {
+    max-width: 100%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq .faq-list {
+  padding: 0 100px;
+}
+
+.faq .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li+li {
+  margin-top: 15px;
+}
+
+.faq .faq-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #47b2e4;
+}
+
+.faq .faq-list .icon-show,
+.faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: #37517e;
+  transition: 0.3s;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #47b2e4;
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+  border-top: 3px solid #47b2e4;
+  border-bottom: 3px solid #47b2e4;
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #47b2e4;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #e7f5fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #37517e;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #6182ba;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #47b2e4;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  border-top: 3px solid #47b2e4;
+  border-bottom: 3px solid #47b2e4;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .php-email-form label {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #47b2e4;
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #47b2e4;
+  border: 0;
+  padding: 12px 34px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #209dd8;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: #f3f5fa;
+  min-height: 40px;
+  margin-top: 72px;
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 68px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #37517e;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #4668a2;
+  content: "/";
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  font-size: 14px;
+  background: #37517e;
+}
+
+#footer .footer-newsletter {
+  padding: 50px 0;
+  background: #f3f5fa;
+  text-align: center;
+  font-size: 15px;
+  color: #444444;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  color: #37517e;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #47b2e4;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: #209dd8;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: #fff;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #37517e;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Jost", sans-serif;
+  color: #5e5e5e;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #37517e;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #47b2e4;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: none;
+  color: #47b2e4;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #47b2e4;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #209dd8;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+#footer .copyright {
+  float: left;
+}
+
+#footer .credits {
+  float: right;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  #footer .footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #footer .copyright,
+  #footer .credits {
+    text-align: center;
+    float: none;
+  }
+
+  #footer .credits {
+    padding-top: 4px;
+  }
+}
+
+/* Custom class for a larger RenaCorp logo */
+.renacorp-logo-lg {
+    max-height: 100px; /* You can adjust this value to your desired size */
+    width: auto;     /* Maintain aspect ratio */
+}
+
+/* You can remove or adjust the previous .logo img rule if this new class is now handling the sizing */
+
+.logo img {
+    max-height: 50px; /* Increased from 120px to 150px - adjust this value as desired */
+    width: auto;     /* Maintains the aspect ratio */
+    vertical-align: middle;
+}
+
+/* If you have existing styles for .logo or .logo a, you might need to adjust them */
+.logo {
+    /* Ensure no conflicting styles are here */
+}
+
+.logo a {
+    display: inline-block;
+    line-height: 1;
+}
+
+.blue-corp {
+    color: #52fcfc; /* This is the exact hex code for the standard 'cyan' */
+}
+
+/* --- Services Section Redirect Button Styling --- */
+
+/* No need for .hidden-service-item CSS definition anymore
+   as Bootstrap's d-none class handles hiding directly in HTML. */
+
+/* Style for the "View All Services" button (now an anchor tag) */
+.btn-show-more-redirect {
+    background-color: #007bff; /* Standard blue, adjust as needed */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 12px 25px; /* Adjust padding for desired button size */
+    border-radius: 50px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; /* To align text and icon horizontally */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and icon */
+    text-decoration: none; /* Remove underline for anchor tag */
+    box-shadow: 0 4px 8px rgba(152, 240, 243, 0.1); /* Subtle shadow */
+}
+
+.btn-show-more-redirect:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Ensure the icon within the button scales and aligns */
+.btn-show-more-redirect i {
+    font-size: 1.2rem; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth transition for icon movement */
+}
+
+/* Optional: Adjust spacing for services grid if needed */
+.services-grid .col-xl-3 {
+    margin-bottom: 25px; /* Add some bottom margin to service boxes */
+}
+
+#navbar .nav-linkz {
+    color: rgb(54, 140, 238); /* Sets the default text color to blue */
+}
+
+/* Optional: To make the active link or hover state also blue, or a different shade of blue */
+#navbar .nav-linkz.actives,
+#navbar .nav-linkz:hover {
+    color: #007bff; /* A slightly different shade of blue for active/hover state, e.g., Bootstrap primary blue */
+}
+
+/* --- FOOTER SPECIFIC BRANDING AND CONTACT INFO STYLES --- */
+
+/* Adjusting the main footer sections for centering/alignment */
+.footer-top .container .row {
+    justify-content: space-around; /* Distributes columns evenly */
+    align-items: flex-start; /* Align items to the top of the row */
+}
+
+/* New: Center content in the branding column */
+.footer-center-brand {
+    text-align: center; /* Centers text and inline-block elements like the logo container */
+    padding-bottom: 20px; /* Add some padding at the bottom for spacing */
+}
+
+/* Styling for the logo container in the footer */
+.footer-logo-container {
+    margin-bottom: 5px; /* Adjust space between logo image and text below */
+    display: block; /* Ensures it behaves as a block element for centering */
+    width: fit-content; /* Helps auto-margins work for centering */
+    margin-left: auto; /* Centers the h1 itself */
+    margin-right: auto; /* Centers the h1 itself */
+    line-height: 1; /* Helps prevent extra space above the image */
+}
+
+/* Styling for the logo image itself within the footer */
+.footer-logo-container img {
+    max-height: 50px; /* Adjust height to match the size in your screenshot */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it renders as a block for proper margin handling */
+}
+
+/* Styling for the "RENACORP TECHNOLOGY" text block */
+.footer-branding-text {
+    font-family: 'Open Sans', sans-serif; /* Or your website's main font */
+    line-height: 1.2; /* Adjust line height for closer text */
+    margin-bottom: 20px; /* Space between branding text and contact info */
+    /* No default color here, as children spans will define their own */
+}
+
+.footer-branding-text .footer-rena-black,
+.footer-branding-text .footer-corp-blue {
+    /* Common styles for RENA and CORP parts to ensure they look cohesive */
+    font-size: 1.6rem; /* Adjust font size to match your screenshot */
+    font-weight: 700; /* Bold */
+    text-transform: uppercase; /* Ensure uppercase */
+    letter-spacing: 0.05em; /* Subtle letter spacing */
+    display: inline; /* Keep RENA and CORP on the same line */
+}
+
+.footer-branding-text .footer-rena-black {
+    color: #333333; /* Black for RENA */
+}
+
+.footer-branding-text .footer-corp-blue {
+    color: #4CCBEB; /* The specific light blue/cyan for CORP */
+}
+
+.footer-branding-text .footer-technology-name {
+    color: #333333; /* Dark grey/black for "TECHNOLOGY" */
+    font-size: 0.9rem; /* Adjust font size, smaller than RENACORP */
+    font-weight: 400; /* Regular weight */
+    display: block; /* Force "TECHNOLOGY" to a new line */
+    text-transform: uppercase; /* Ensure uppercase */
+    letter-spacing: 0.2em; /* Wider letter spacing */
+    margin-top: 5px; /* Space between RENACORP and TECHNOLOGY */
+}
+
+/* Removed the old .footer-contact as its purpose has changed */
+/* .footer-contact {
+    text-align: center;
+    padding-bottom: 20px;
+} */
+
+
+/* Useful Links Section */
+.footer-links h4 {
+    text-align: center; /* Center the heading for useful links */
+    margin-bottom: 15px;
+}
+
+/* Style the dropdown button */
+.footer-dropdown-btn {
+    background-color: #007bff; /* Example blue, match your theme */
+    border-color: #007bff;
+    color: white;
+
+    /* --- Changes for centering text, smaller size, rounded corners, and responsiveness --- */
+    width: auto; /* Allow button to shrink to content size */
+    min-width: 180px; /* Set a minimum width for better appearance on larger screens */
+    max-width: 250px; /* Set a maximum width to prevent it from getting too wide */
+    text-align: center; /* Center the text inside the button */
+    padding: 10px 20px; /* Adjust padding to control button height and horizontal spacing */
+    border-radius: 25px; /* Make corners rounded (adjust value for desired roundness) */
+
+    display: block; /* Ensure it's a block element to allow margin: auto for centering itself */
+    margin: 0 auto; /* Center the button horizontally within its column */
+}
+
+.footer-dropdown-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+/* Useful Links Section */
+.footer-links h4 {
+    text-align: center; /* Center the heading for useful links */
+    margin-bottom: 15px;
+}
+
+/* Style the dropdown button */
+.footer-dropdown-btn {
+    background-color: #007bff; /* Example blue, match your theme */
+    border-color: #007bff;
+    color: white;
+
+    width: auto;
+    min-width: 180px;
+    max-width: 250px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+
+    display: block; /* Keep this to center the button itself */
+    margin: 0 auto; /* Center the button horizontally within its column */
+}
+
+.footer-dropdown-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+/* Style the dropdown menu itself */
+.footer-links .dropdown-menu {
+    width: auto;
+    min-width: 180px;
+    max-width: 250px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    /* --- REMOVE OR COMMENT OUT THIS LINE! --- */
+    /* display: block; */
+
+    /* Ensure the dropdown menu is centered when it does appear */
+    margin-left: auto;
+    margin-right: auto;
+    float: none; /* Override any float Bootstrap might apply */
+    position: absolute; /* Crucial for Bootstrap's dropdown positioning */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.footer-links .dropdown-item {
+    padding: 10px 15px;
+    color: #000000; /* Made text darker */
+}
+
+.footer-links .dropdown-item:hover {
+    background-color: #e9ecef; /* Keep light background on hover */
+    color: #007bff; /* Keep the blue on hover for consistency */
+}
+
+/* Styling for the logo image itself within the footer */
+.footer-logo-container img {
+    max-height: 100px; /* Increased from 50px to 70px - adjust as desired */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it renders as a block for proper margin handling */
+}
+
+/* Social Networks & Contact Info Section */
+.footer-social-contact {
+    text-align: center; /* Center content in this column */
+}
+
+.footer-social-contact h4 {
+    margin-bottom: 15px; /* Space between heading and social icons */
+}
+
+.footer-social-contact .social-links a {
+    display: inline-block;
+    background: #4CCBEB; /* Your brand blue for social icons */
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    font-size: 18px;
+    margin-bottom: 15px; /* Space between social icons and contact info below */
+}
+
+.footer-social-contact .social-links a:hover {
+    background: #0056b3; /* Darker blue on hover */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styling for the contact information paragraph under social icons */
+.footer-contact-info-social { /* New class for the contact info here */
+    color: #333333; /* Dark grey/black for contact text */
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.8; /* Space out the lines for readability */
+    margin-top: 15px; /* Space from social links above */
+    text-align: center; /* Ensures contact info is centered within the column */
+}
+
+.footer-contact-info-social strong {
+    font-weight: 600; /* Make the labels slightly bolder */
+}
+
+
+/* Footer Bottom */
+.footer-bottom .copyright {
+    text-align: center;
+    width: 100%; /* Ensure it takes full width of its parent for centering */
+    margin-top: 20px; /* Add some space above the copyright */
+}
+
+/* Optional: Adjust for responsiveness if needed, e.g., on very small screens */
+@media (max-width: 767px) {
+    .footer-top .col-md-6 {
+        margin-bottom: 30px; /* Add space between columns on small screens */
+    }
+    .footer-center-brand {
+        padding-bottom: 0; /* No extra padding if it's the only block */
+    }
+    .footer-logo-container img {
+        max-height: 40px;
+    }
+    .footer-branding-text .footer-rena-black,
+    .footer-branding-text .footer-corp-blue {
+        font-size: 1.4rem;
+    }
+    .footer-branding-text .footer-technology-name {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- MAKOBE ABOUT US SECTION STYLES (Adjustments for new content) --- */
+
+/* Wrapper for the main content to control its width and center it */
+.makobe-about-section .about-content-wrapper {
+    max-width: 900px; /* Adjust this value to control the maximum width of your content block */
+    margin: 30px auto; /* Centers the block horizontally and adds vertical margin */
+    padding: 0 15px; /* Add some padding on sides to prevent content touching edges on smaller screens */
+    text-align: center; /* Ensures the logo, heading, and button are centered within this wrapper */
+}
+
+/* Styling for the image within this section */
+.makobe-about-section .about-section-logo {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 200px;
+    height: auto;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+/* Styling for all paragraph texts (including new one) */
+.makobe-about-section .about-paragraph-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: left; /* Keep text left-aligned for readability within the centered block */
+    margin-bottom: 20px; /* Default space between paragraphs */
+}
+
+/* New style for the added subheading */
+.makobe-about-section .about-section-heading {
+    font-size: 1.8rem; /* Adjust font size for heading */
+    color: #2c3e50; /* Darker color for headings, adjust as desired */
+    margin-top: 30px; /* Space above the heading */
+    margin-bottom: 15px; /* Space below the heading */
+    text-align: center; /* Center the heading itself */
+}
+
+
+/* Styling for the "Download Company Profile" button */
+.makobe-about-section .download-profile-btn {
+    margin-top: 10px;
+    padding: 12px 30px;
+    font-size: 1rem;
+}
+
+/* Optional: Adjust hr (horizontal rule) styles if needed */
+.makobe-about-section hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-color: #eee;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .makobe-about-section .about-content-wrapper {
+        max-width: 100%;
+        padding: 0 20px;
+        margin: 20px auto;
+    }
+    .makobe-about-section .about-section-logo {
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+    .makobe-about-section .about-paragraph-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    .makobe-about-section .about-section-heading {
+        font-size: 1.5rem; /* Adjust heading size for mobile */
+        margin-top: 20px;
+    }
+}
+
+/* --- MISSION & VISION SECTION STYLES (RenaCorp) --- */
+
+.mission-vision-section {
+    padding: 60px 0; /* Add top/bottom padding to the section */
+    background-color: #f8f9fa; /* Light background color for separation, adjust as needed */
+}
+
+.mission-vision-section .mission-vision-wrapper {
+    max-width: 900px; /* Control the maximum width of the content block */
+    margin: 0 auto; /* Centers the block horizontally on the page */
+    padding: 0 15px; /* Add some padding on the sides for smaller screens */
+    text-align: center; /* This will center block-level elements like the h2 and ion-icon */
+}
+
+.mission-vision-section .mission-block,
+.mission-vision-section .vision-block {
+    margin-bottom: 50px; /* Space between the Mission and Vision blocks */
+}
+
+.mission-vision-section .section-title-centered {
+    font-family: 'Playfair Display', serif; /* A more elegant font as seen in screenshot */
+    font-size: 2.2rem; /* Large and prominent heading */
+    color: #333; /* Darker color for headings */
+    margin-bottom: 20px; /* Space below heading */
+    text-align: center; /* Ensure heading is centered */
+    font-style: italic; /* As per the image */
+}
+
+.mission-vision-section .mission-vision-icon {
+    font-size: 2.5rem; /* Larger icon size */
+    color: #4CCBEB; /* RenaCorp's blue for the icon */
+    /* If you also want a background like the yellow square in the screenshot (which is unusual for ion-icon, might indicate a loading issue), you'd add: */
+    /* background-color: darkblue; */
+    /* padding: 5px; */
+    /* border-radius: 5px; */
+    display: block; /* Make it a block to center it */
+    margin: 0 auto 15px auto; /* Center icon and add bottom margin */
+}
+
+.mission-vision-section .mission-vision-para {
+    font-size: 1.1rem; /* Adjust paragraph font size for readability */
+    line-height: 1.8; /* Adjust line height for better spacing */
+    color: #555; /* Slightly lighter grey for paragraph text */
+    text-align: center; /* Center align paragraph text for this section's style */
+    max-width: 750px; /* Control width of paragraph for better readability on wide screens */
+    margin: 0 auto; /* Center the paragraph text block itself */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .mission-vision-section {
+        padding: 40px 0;
+    }
+    .mission-vision-section .mission-vision-wrapper {
+        padding: 0 20px;
+    }
+    .mission-vision-section .section-title-centered {
+        font-size: 1.8rem;
+    }
+    .mission-vision-section .mission-vision-icon {
+        font-size: 2rem;
+    }
+    .mission-vision-section .mission-vision-para {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: center; /* Keep centered on mobile */
+    }
+    .mission-vision-section .mission-block,
+    .mission-vision-section .vision-block {
+        margin-bottom: 40px;
+    }
+}
+
+/* For the rounded button (keep this as is) */
+.rounded-button {
+    border-radius: 50px; /* Adjust as needed for desired roundness */
+    padding: 10px 30px; /* Adjust padding for better button size */
+}
+
+/* Styles for the main content wrapper (this is where the full grey background and border should go) */
+.about-content-wrapper {
+    background-color: #f8f9fa; /* Apply the grey background here */
+    padding: 50px; /* Adjust padding for inside the grey box */
+    margin-top: 40px; /* Add margin above the section */
+    margin-bottom: 40px; /* Add margin below the section */
+    border-radius: 10px; /* Optional: adds slight roundness to the grey box */
+    border: 1px solid #ADD8E6; /* Added a 1px solid light blue border here */
+}
+
+/* Remove background and border from .rena-corp-info-section if they are now on .about-content-wrapper */
+/* Keep margin-top/bottom and padding if you still want additional spacing around Strengths/Pricing within the larger grey box */
+.rena-corp-info-section {
+    /* You might want to adjust or remove these if the main wrapper handles all spacing/background */
+    /* For example, if you want more space just around the strengths/pricing, keep some padding/margin */
+    padding-top: 30px; /* Adjust if needed */
+    padding-bottom: 30px; /* Adjust if needed */
+    margin-top: 30px; /* Add some top margin to separate from content above */
+    margin-bottom: 30px; /* Add some bottom margin to separate from content below */
+    /* Removed: background-color, border, border-radius as they are now on .about-content-wrapper */
+}
+
+/* Update your existing CSS for the list items */
+ul li {
+    position: relative; /* Essential for positioning the icon */
+    padding-left: 30px; /* Space for the icon and a little gap */
+    margin-bottom: 10px; /* Keep existing spacing between list items */
+    text-align: left; /* Ensure text alignment starts from the left */
+}
+
+ul li .bi-check-circle {
+    position: absolute; /* Position the icon independently */
+    left: 0; /* Align the icon to the very left of the list item's padded area */
+    top: 0; /* Align to the top of the text line */
+    color: #007bff; /* Optional: Make the check icon blue for visibility/branding */
+    font-size: 1em; /* Adjust size if needed, 'em' relative to parent text */
+}
+
+/* Custom class for a larger RenaCorp logo */
+.renacorp-logo-lg {
+    max-height: 120px; /* You can adjust this value to your desired size */
+    width: auto;     /* Maintain aspect ratio */
+}
+
+/* Styles for the Back to Top button */
+.back-to-top {
+    position: fixed; /* Ensures it stays in place when scrolling */
+    right: 20px; /* Adjust as needed */
+    bottom: 90px; /* Increased from a typical 20px/30px to create space */
+    z-index: 996; /* A slightly lower z-index than the chat if needed, but still high */
+    background: #4CCBEB; /* Your brand blue */
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    display: flex; /* To center the icon inside */
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #0056b3; /* Darker blue on hover */
+    color: #fff;
+}
+
+/* Elfsight WhatsApp widget - No direct changes needed here unless you want to reposition the whole widget */
+/* The Elfsight widget usually has its own fixed positioning. */
+/* If you need to move the Elfsight widget itself: */
+.elfsight-app-84d8b95f-f30f-46d0-ab53-ce3e4704e264 {
+    /* These styles might be overridden by Elfsight's inline styles or scripts, but you can try. */
+    /* position: fixed !important; */
+    /* bottom: 20px !important; */
+    /* right: 20px !important; */
+    /* z-index: 99999 !important; */
+}
+
+/* You might need a media query for smaller screens if the spacing looks off on mobile */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px; /* Slightly less space on mobile if desired */
+        right: 15px;
+    }
+}
+
+/* Styling for the logo container in the footer */
+
+/*--------------------------------------------------------------
+# Header Size Fix and Polish
+--------------------------------------------------------------*/
+
+/* HEADER: Ensure compact vertical space and professional look */
+#header {
+  background: #fff; 
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+  /* CRITICAL: Reduce padding to ensure the header is thin and compact */
+  padding: 10px 0; 
+  transition: all 0.5s; 
+}
+
+/* LOGO: FIX - Making the logo visible (60px) without stretching the header */
+#header .logo img {
+    /* FIX: Set max-height to 60px. This is visible, professional, and prevents overlap. */
+    max-height: 70px; 
+    height: auto; 
+    width: auto; 
+    display: block; 
+}
+
+
+/* NAVIGATION LINKS: Professional Coloring */
+.navbar a {
+  color: #37517e; 
+  font-weight: 500;
+  transition: 0.3s;
+  /* Adjust padding to align links vertically with the logo */
+  padding: 10px 0 10px 30px; 
+}
+
+.navbar a:hover, .navbar .active {
+    color: #47b2e4; 
+}
+
+/* BUTTON: Polished and Renamed (using btn-get-started from previous steps) */
+.navbar .btn-get-started { 
+    color: #fff;
+    background: #47b2e4; 
+    padding: 8px 25px;
+    margin-left: 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar .btn-get-started:hover {
+    background: #209dd8;
+}
+
+
+/* ====================================================
+   VHEMBE CONNECT HERO (ELO DIGITAL OFFICE STYLE)
+   ==================================================== */
+
+.vhembe-elo-hero {
+  position: relative;
+  width: 100%;
+  min-height: 95vh;
+  padding-top: 120px;
+  padding-bottom: 70px;
+  background: #0b1e35; /* deep blue, similar to ELO hero */
+  overflow: hidden;
+}
+
+/* Neon Light Green Vertical Accent Stripe (left side) */
+.hero-green-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3cffd0, #00d4a8, #009b88);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+  z-index: 3;
+}
+
+/* Right Background Image (Full Height) */
+.hero-img-wrapper {
+  position: relative;
+}
+
+.hero-elo-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: brightness(0.65) saturate(1.2);
+  position: relative;
+  z-index: 2;
+}
+
+/* Dark overlay over image (matches ELO’s style) */
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(11,30,53,0.7) 10%,
+    rgba(11,30,53,0.4) 40%,
+    rgba(0,0,0,0.2)
+  );
+  z-index: 1;
+  border-radius: 8px;
+}
+
+/* ======================
+     TEXT STYLING
+   ====================== */
+
+.elo-hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.gradient-highlight {
+  background: linear-gradient(45deg, #4adeff, #00ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.elo-subtext {
+  font-size: 20px;
+  max-width: 520px;
+  color: #cdd6e6;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+/* Services pill list (ELO Style) */
+.elo-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.elo-services span {
+  background: rgba(255,255,255,0.1);
+  color: #c8f9ff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+/* ======================
+      CTA BUTTONS
+   ====================== */
+
+.btn-elo-primary {
+  background: #00ffaa;
+  color: #003a29;
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn-elo-primary:hover {
+  background: #00e699;
+}
+
+.btn-elo-outline {
+  padding: 12px 30px;
+  color: #00ffaa;
+  border: 2px solid #00ffaa;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+.btn-elo-outline:hover {
+  background: #00ffaa;
+  color: #003a29;
+}
+
+/* ======================
+   MOBILE RESPONSIVENESS
+   ====================== */
+@media (max-width: 991px) {
+  .vhembe-elo-hero {
+    padding-top: 90px;
+    text-align: center;
+  }
+
+  .elo-hero-title {
+    font-size: 40px;
+  }
+
+  .hero-img-wrapper {
+    margin-top: 30px;
+  }
+
+  .hero-green-accent {
+    width: 5px;
+  }
+}
+
+
+/* ===============================================
+   VHEMBE CONNECT — ABOUT US SECTION RESTYLE
+   =============================================== */
+
+.about-vhembe {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef7ff 100%);
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0a2d44;
+  margin-bottom: 10px;
+}
+
+.about-subtext {
+  max-width: 700px;
+  color: #4a6a82;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.about-main-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #325066;
+  margin-bottom: 25px;
+}
+
+/* Feature Items (Left Column Badges) */
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #1f3f58;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(200, 235, 255, 0.35);
+  border: 1px solid rgba(150, 210, 255, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.feature-item i {
+  font-size: 22px;
+  color: #1aaee8;
+}
+
+/* Right Column Grid Box */
+.about-grid-box {
+  background: #ffffff;
+  padding: 28px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #1aaee8;
+}
+
+.about-grid-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #0b314a;
+}
+
+.about-grid-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-grid-box li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #3d5a6f;
+  padding-left: 26px;
+  position: relative;
+}
+
+.about-grid-box li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 16px;
+  color: #1aaee8;
+}
+
+/* Learn More Button */
+.btn-learn-more {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 2px solid #1aaee8;
+  color: #1aaee8;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-learn-more:hover {
+  background: #1aaee8;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-grid-box {
+    margin-top: 35px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Services Section with 3D Flip Card Animation
+--------------------------------------------------------------*/
+.services .section-title p {
+    margin-top: -15px; /* Tighten the spacing after the main title */
+}
+
+/* 1. Base Flip Card Container */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 280px; /* Standard height for the cards */
+  perspective: 1000px; /* Gives the 3D effect depth */
+  border-radius: 10px;
+}
+
+/* 2. Inner Container for the flip action */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s; /* The magic transition time */
+  transform-style: preserve-3d; /* Required for the 3D flip */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* 3. Flip on Hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 4. Positioning Front and Back Faces */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Hide the back side during the flip */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 5. Styling Card Front (Default View) */
+.card-front {
+  background: #fff;
+  z-index: 2;
+  border: 1px solid #eee;
+}
+
+.card-front .icon {
+    margin-bottom: 10px;
+}
+
+.card-front .icon i {
+    font-size: 38px; /* Slightly larger icon */
+    color: #47b2e4;
+    line-height: 0;
+    transition: 0.3s;
+}
+
+.card-front h4 {
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.card-front h4 a {
+    color: #37517e; /* Ensure the link color is corporate blue */
+}
+
+.card-front p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* 6. Styling Card Back (Hover View) */
+.card-back {
+  background: #37517e; /* Dark Blue corporate background */
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+}
+
+.card-back h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.card-back ul li {
+    padding: 5px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.card-back ul li i {
+    color: #47b2e4; /* Use brand blue for checkmarks */
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* 7. Button on the back of the card */
+.btn-flip-more {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #47b2e4;
+    font-weight: 600;
+    transition: 0.3s;
+    border-bottom: 2px solid #47b2e4;
+    padding-bottom: 2px;
+}
+
+.btn-flip-more:hover {
+    color: #73c5eb;
+    border-color: #73c5eb;
+}
+
+/* 8. View All Services Button (Center Redirect) */
+.btn-show-more-redirect {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #37517e;
+    padding: 10px 20px;
+    border: 2px solid #37517e;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.btn-show-more-redirect i {
+    margin-left: 8px;
+    transition: margin-left 0.4s;
+}
+
+.btn-show-more-redirect:hover {
+    background: #47b2e4;
+    color: #fff;
+    border-color: #47b2e4;
+}
+
+.btn-show-more-redirect:hover i {
+    margin-left: 15px;
+}
+
+/*--------------------------------------------------------------
+# Clients/Partners Section Styling (Revised: White Background, Active Colors)
+--------------------------------------------------------------*/
+.clients {
+  padding: 30px 0; 
+  background-color: #ffffff; /* REQUIREMENT: Set to pure white background */
+}
+
+.clients .section-title h3 {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.clients .client-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Center the entire row of logos */
+}
+
+.clients .client-logo {
+    /* Set a fixed height for the container to prevent layout shifting on hover */
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Internal padding */
+}
+
+.clients img {
+  max-width: 90%; /* Scale logos nicely within their columns */
+  height: auto;
+  opacity: 1; /* REQUIREMENT: Logos are fully opaque (no fading) */
+  transition: all 0.4s ease-in-out;
+  /* REQUIREMENT: Removed filter: grayscale(100%); to keep colors active */
+  filter: none; 
+}
+
+.clients img:hover {
+  opacity: 1; /* Ensure opacity remains 1 */
+  filter: none; /* Ensure no grayscale is applied */
+  transform: scale(1.05); /* Subtle zoom effect on hover remains */
+}
+
+/* Mobile Responsiveness (Ensuring logos look good on small screens) */
+@media (max-width: 991px) {
+  /* On tablets, we show 4 logos per row (col-md-3) */
+  .clients .client-logo {
+      height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* On mobile, we show 3 logos per row (col-4) for better visibility */
+  .clients .client-logo {
+      height: 60px;
+      margin-bottom: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Why Us Section: The Vhembe Connect Advantage (Visually Striking)
+--------------------------------------------------------------*/
+
+.why-us {
+  padding: 60px 0;
+  background-color: #f7f9fc; /* Light background for contrast */
+}
+
+.why-us .content h2 {
+    color: #37517e; /* Corporate Blue */
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.why-us .content p {
+    color: #5f6f81;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Accreditation Banner Styling (Prominent and Vibrant) */
+.accreditation-banner {
+    background: #47b2e4; /* Use primary brand blue */
+    border-radius: 8px;
+    padding: 18px 25px;
+    margin-bottom: 35px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(71, 178, 228, 0.4); /* Strong shadow for pop */
+    display: flex;
+    align-items: center;
+}
+
+.accreditation-banner i {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+/* Image Container Styling (Object-Fit Implementation) */
+.why-us .why-us-image-container {
+    padding: 0 15px;
+    min-height: 450px; /* Ensure a good height on desktop */
+}
+
+.why-us .why-us-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Deep shadow on image */
+  
+  /* CRITICAL: Object-fit implementation */
+  background-size: cover;
+  background-position: center;
+  /* Additional setting for object-fit lookalike on background image */
+  min-height: 450px; 
+}
+
+
+/* Accordion List Enhancement (Modern and Clean) */
+.why-us .accordion-list ul {
+  padding: 0;
+}
+
+.why-us .accordion-list li {
+  padding: 0 0 15px 0;
+}
+
+.why-us .accordion-list a {
+  display: flex;
+  position: relative;
+  background: #ffffff; /* White card background */
+  width: 100%;
+  text-align: left;
+  padding: 18px 30px;
+  border-radius: 10px; /* More rounded corners */
+  color: #37517e;
+  font-weight: 600;
+  font-size: 17px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Clean lift effect */
+  transition: 0.3s;
+  border-left: 4px solid transparent; /* Prepare for hover/active state */
+}
+
+.why-us .accordion-list a:hover,
+.why-us .accordion-list a:not(.collapsed) {
+    background: #fff;
+    color: #47b2e4; /* Blue text on active */
+    border-left: 4px solid #47b2e4; /* Vibrant left border highlight */
+}
+
+.why-us .accordion-list a span {
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: 15px;
+  color: #47b2e4;
+  transition: 0.3s;
+}
+
+.why-us .accordion-list a:not(.collapsed) span {
+    color: #37517e; /* Change number color when active for contrast */
+}
+
+.why-us .accordion-list a .icon-show,
+.why-us .accordion-list a .icon-close {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.why-us .accordion-list p {
+  padding: 15px 0 0 45px; /* Indent the paragraph text */
+  margin-bottom: 0;
+  color: #6c757d;
+  font-size: 15px;
+}
+
+/* Responsive Adjustments for Image Height */
+@media (max-width: 991px) {
+    .why-us .why-us-image-container {
+        order: 1; /* Move image above content on mobile */
+        min-height: 300px;
+        margin-bottom: 30px;
+    }
+    .why-us .why-us-image {
+        min-height: 300px;
+    }
+    .why-us .content h2 {
+        font-size: 30px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Contact Section Styling (Narrow, Card-based, Two Locations)
+--------------------------------------------------------------*/
+.contact {
+    padding: 60px 0;
+    background: #f7f9fc; /* Light background for the section */
+}
+
+/* Location Card Container Styling */
+.contact .contact-card {
+    background: #ffffff;
+    padding: 30px;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #47b2e4; /* Vibrant blue accent on top */
+}
+
+.contact .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Individual Info Items (Address, Email, Phone) */
+.contact .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact .info-item i {
+    font-size: 24px;
+    color: #47b2e4;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+    background: #e6f7ff; /* Very light blue circle behind icon */
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.contact .info-item h5 {
+    padding: 0;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.contact .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #37517e;
+}
+
+.contact .info-item a {
+    color: #37517e;
+    transition: 0.3s;
+}
+
+.contact .info-item a:hover {
+    color: #47b2e4;
+}
+
+/* Map Styling */
+.contact .map-container {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    height: 300px; /* Slightly taller map for better view */
+}
+
+.contact .map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .contact .contact-card {
+        margin-bottom: 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer Styling (Light Grey, Big Logo, Two Addresses)
+--------------------------------------------------------------*/
+#footer {
+  font-size: 14px;
+  background: #f8f9fa; /* REQUIREMENT: Light grey background */
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: #f8f9fa;
+  color: #37517e;
+}
+
+#footer .footer-logo-col {
+  /* Ensure the logo column is visually prominent and centered on small screens */
+  text-align: left;
+}
+
+/* Logo Styling */
+#footer .footer-logo {
+  max-height: 320px; /* REQUIREMENT: Nice and big logo size */
+  width: auto;
+  margin-bottom: 20px;
+}
+
+#footer h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #37517e;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-contact-list {
+  padding: 0;
+  list-style: none;
+}
+
+#footer .footer-contact-list li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  color: #5e7290;
+}
+
+#footer .footer-contact-list li i {
+  padding-right: 2px;
+  color: #47b2e4;
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+#footer .footer-address {
+    line-height: 24px;
+    font-size: 14px;
+    color: #5e7290;
+}
+
+/* Social Links Styling */
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #47b2e4; /* Use your primary brand color */
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Footer Bottom (Copyright) */
+#footer .footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #eef0f2;
+}
+
+#footer .copyright {
+  float: left;
+  color: #37517e;
+}
+
+#footer .credits {
+  float: right;
+  font-size: 13px;
+  color: #5e7290;
+}
+
+@media (max-width: 991px) {
+  #footer .copyright,
+  #footer .credits {
+    float: none;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #footer .footer-logo-col {
+    text-align: center; /* Center logo on mobile */
+    margin-bottom: 25px;
+  }
+  #footer .footer-logo {
+    max-height: 90px; /* Slightly smaller logo on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #footer .social-links {
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
+# Application Page Hub Styles (Solid Green)
+# Added to style.css for guaranteed loading
+--------------------------------------------------------------*/
+
+#apply-main {
+  /* Adjusted padding to accommodate fixed header and space the content */
+  padding: 120px 0 60px 0;
+  background: #f7f9fc; /* Light background for contrast */
+}
+
+/* 1. Heading Styling */
+
+#apply-main .section-title {
+  padding-bottom: 30px; 
+}
+
+#apply-main .section-title h2 {
+    color: #37517e; 
+    font-weight: 700;
+    margin-bottom: 0; 
+}
+
+/* 2. Solid Green Underline */
+.solid-green-underline {
+    height: 4px; /* Thickness of the line */
+    width: 250px; /* Width of the line */
+    margin-top: 10px; /* Space between heading and line */
+    background: #28a745; /* Dark Green */
+    border-radius: 2px;
+}
+
+/* 3. Button (Card) Styling - Dark Green */
+
+.apply-card-link {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    display: block; 
+    height: 100%;
+}
+
+.apply-card {
+  padding: 30px 20px; 
+  text-align: center;
+  transition: all 0.4s ease-in-out; 
+  border-radius: 10px; /* Slightly less rounded */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* Solid Dark Green Background */
+  background: #28a745; 
+}
+
+.apply-card i {
+  font-size: 45px; 
+  color: #fff; 
+  margin-bottom: 10px;
+  transition: all 0.4s;
+}
+
+.apply-card h4 {
+  font-size: 20px; 
+  font-weight: 600;
+  color: #fff; 
+  margin-bottom: 0;
+}
+
+/* 4. Hover Effects */
+
+.apply-card:hover {
+  /* Slightly darker green on hover for feedback */
+  background: #1e7e34;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px); /* Small lift */
+}
+
+.apply-card:hover i {
+    transform: scale(1.05); 
+}
+
+/*--------------------------------------------------------------
+# Relocation Page Specific Styles (relocate.css)
+# This file is critical for the page's structure and appearance.
+--------------------------------------------------------------*/
+
+/* ==================
+  1. RELOCATION HERO SECTION
+================== */
+#relocate-hero {
+    width: 100%;
+    /* Darker brand color for a serious, official feel */
+    background: linear-gradient(45deg, #37517e 0%, #2a3d58 100%);
+    height: 40vh; 
+    margin-top: 70px; /* Offset for fixed header */
+    padding: 100px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#relocate-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#relocate-hero h2 {
+    color: #fff9;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* ==================
+  2. RELOCATION FORM STYLING
+================== */
+.form-section {
+    padding: 60px 0;
+    background: #f7f9fc; /* Light background for the form container */
+}
+
+.relocation-form {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.relocation-form h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #37517e;
+    border-bottom: 2px solid #47b2e4; /* Blue underline for sections */
+    padding-bottom: 10px;
+}
+
+.relocation-form label {
+    font-weight: 500;
+    color: #5e7290;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.relocation-form .form-label-top {
+    font-size: 14px;
+}
+
+.relocation-form .form-group {
+    padding-bottom: 20px;
+}
+
+.relocation-form .form-control {
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.relocation-form .form-control:focus {
+    border-color: #47b2e4;
+    box-shadow: 0 0 0 0.15rem rgba(71, 178, 228, 0.25);
+}
+
+/* Custom Primary Submit Button */
+.btn-primary-custom {
+    background: #47b2e4; /* Primary brand blue */
+    border: 0;
+    padding: 12px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(71, 178, 228, 0.4);
+}
+
+.btn-primary-custom:hover {
+    background: #3498db; /* Darker shade on hover */
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Upgrade Page Specific Styles (upgrade.css)
+--------------------------------------------------------------*/
+
+/* ==================
+  1. CUSTOM HEADING STYLING (Replacing Hero)
+================== */
+.section-heading-spacing {
+    padding-top: 100px; /* Space from the fixed header */
+    padding-bottom: 30px; 
+    text-align: center;
+}
+
+.section-heading-spacing h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 5px;
+}
+
+.section-heading-spacing p {
+    font-size: 18px;
+    color: #5e7290;
+}
+
+
+/* ==================
+  2. UPGRADE FORM STYLING (Reusing relocate's form styles)
+================== */
+.form-section {
+    padding: 30px 0 60px 0; /* Adjusted top padding since we have the heading above */
+    background: #f7f9fc; /* Light background for the form container */
+}
+
+.upgrade-form {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.upgrade-form h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #37517e;
+    border-bottom: 2px solid #47b2e4; /* Blue underline for sections */
+    padding-bottom: 10px;
+}
+
+.upgrade-form label {
+    font-weight: 500;
+    color: #5e7290;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.upgrade-form .form-group {
+    padding-bottom: 20px;
+}
+
+.upgrade-form .form-control {
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.upgrade-form .form-control:focus {
+    border-color: #47b2e4;
+    box-shadow: 0 0 0 0.15rem rgba(71, 178, 228, 0.25);
+}
+
+/* Styling for Select dropdown to match input fields */
+.upgrade-form select.form-control {
+    /* Ensures select dropdown looks consistent */
+    appearance: none; /* Removes default OS styling in some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%20197.3L146.2%2056.4c-3.1-3.1-8.2-3.1-11.3%200L5.4%20197.3c-3.1%203.1-3.1%208.2%200%2011.3l23.5%2023.5c3.1%203.1%208.2%203.1%2011.3%200l105.7-105.7L252.2%20232c3.1%203.1%208.2%203.1%2011.3%200l23.5-23.5c3.1-3.1%203.1-8.2%200-11.3z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 10px auto;
+    padding-right: 30px; /* Space for the dropdown arrow */
+}
+
+
+/* Custom Primary Submit Button */
+.btn-primary-custom {
+    background: #47b2e4; /* Primary brand blue */
+    border: 0;
+    padding: 12px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(71, 178, 228, 0.4);
+}
+
+.btn-primary-custom:hover {
+    background: #3498db; /* Darker shade on hover */
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Cancellation Page Specific Styles (cancellation.css)
+--------------------------------------------------------------*/
+
+/* ==================
+  1. CUSTOM HEADING STYLING (Replacing Hero)
+================== */
+.section-heading-spacing {
+    padding-top: 100px; /* Space from the fixed header */
+    padding-bottom: 30px; 
+    text-align: center;
+}
+
+.section-heading-spacing h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 5px;
+}
+
+.section-heading-spacing p {
+    font-size: 18px;
+    color: #5e7290;
+}
+
+
+/* ==================
+  2. CANCELLATION FORM STYLING
+================== */
+.form-section {
+    padding: 30px 0 60px 0;
+    background: #f7f9fc;
+}
+
+.cancellation-form {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.cancellation-form h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #37517e;
+    border-bottom: 2px solid #47b2e4;
+    padding-bottom: 10px;
+}
+
+.cancellation-form label {
+    font-weight: 500;
+    color: #5e7290;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Specific styling for radio button labels (reason/type/date) */
+.cancellation-form .form-check {
+    padding-bottom: 5px;
+}
+
+.cancellation-form .form-group {
+    padding-bottom: 20px;
+}
+
+.cancellation-form .form-control {
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.cancellation-form .form-control:focus {
+    border-color: #47b2e4;
+    box-shadow: 0 0 0 0.15rem rgba(71, 178, 228, 0.25);
+}
+
+/* Textarea styling */
+.cancellation-form textarea.form-control {
+    resize: vertical;
+    padding: 15px;
+}
+
+/* Custom Primary Submit Button (Reused) */
+.btn-primary-custom {
+    background: #47b2e4; 
+    border: 0;
+    padding: 12px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(71, 178, 228, 0.4);
+}
+
+.btn-primary-custom:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Debit Order Page Specific Styles (debitorder.css)
+--------------------------------------------------------------*/
+
+/* ==================
+  1. CUSTOM HEADING STYLING (Replacing Hero)
+================== */
+.section-heading-spacing {
+    padding-top: 100px; /* Space from the fixed header */
+    padding-bottom: 30px; 
+    text-align: center;
+}
+
+.section-heading-spacing h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #37517e;
+    margin-bottom: 5px;
+}
+
+.section-heading-spacing p {
+    font-size: 18px;
+    color: #5e7290;
+}
+
+
+/* ==================
+  2. DEBIT ORDER FORM STYLING
+================== */
+.form-section {
+    padding: 30px 0 60px 0;
+    background: #f7f9fc;
+}
+
+.debitorder-form {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.debitorder-form h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #37517e;
+    border-bottom: 2px solid #47b2e4;
+    padding-bottom: 10px;
+}
+
+.debitorder-form label {
+    font-weight: 500;
+    color: #5e7290;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.debitorder-form .form-group {
+    padding-bottom: 20px;
+}
+
+.debitorder-form .form-control {
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.debitorder-form .form-control:focus {
+    border-color: #47b2e4;
+    box-shadow: 0 0 0 0.15rem rgba(71, 178, 228, 0.25);
+}
+
+/* Styling for Select dropdowns to match input fields */
+.debitorder-form select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%20197.3L146.2%2056.4c-3.1-3.1-8.2-3.1-11.3%200L5.4%20197.3c-3.1%203.1-3.1%208.2%200%2011.3l23.5%2023.5c3.1%203.1%208.2%203.1%2011.3%200l105.7-105.7L252.2%20232c3.1%203.1%208.2%203.1%2011.3%200l23.5-23.5c3.1-3.1%203.1-8.2%200-11.3z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 10px auto;
+    padding-right: 30px;
+}
+
+
+/* Custom Primary Submit Button */
+.btn-primary-custom {
+    background: #47b2e4;
+    border: 0;
+    padding: 12px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(71, 178, 228, 0.4);
+}
+
+.btn-primary-custom:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# About Us Page Specific Styles (about-us.css)
+--------------------------------------------------------------*/
+
+:root {
+    --primary-color: #47b2e4; /* Light Blue */
+    --secondary-color: #37517e; /* Dark Blue */
+    --background-light: #f7f9fc;
+    --text-color: #444444;
+}
+
+/* ==================
+  01. About Header (No Hero, just spaced heading)
+================== */
+#about-header {
+    width: 100%;
+    /* Use a contrasting color similar to existing page headers */
+    background: var(--secondary-color);
+    margin-top: 70px; /* Offset for fixed header */
+    padding: 100px 0 60px 0;
+    text-align: center;
+}
+
+#about-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#about-header h2 {
+    color: #fff9;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* ==================
+  Common Section Styling
+================== */
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    color: var(--secondary-color);
+}
+
+.section-title p {
+    margin: 0;
+    font-size: 15px;
+    color: #888;
+}
+
+.gradient-underline {
+    height: 4px; 
+    width: 100px;
+    margin: 10px auto 0 auto; 
+    background: linear-gradient(to right, var(--primary-color), #38ef7d); /* Blue to Green Gradient */
+    border-radius: 2px;
+}
+
+/* ==================
+  02. Core Business Services
+================== */
+#services {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+#services .icon-box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 29px 0 rgba(16, 70, 100, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+    height: 100%;
+}
+
+#services .icon-box .icon {
+    margin: 0 auto 15px auto;
+    padding-top: 12px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+#services .icon-box .icon i {
+    font-size: 24px;
+    line-height: 1;
+    color: #fff;
+}
+
+#services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#services .icon-box h4 a {
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+#services .icon-box:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+#services .icon-box:hover .icon {
+    background: var(--secondary-color);
+}
+
+/* ==================
+  03. Organizational Strength (2-Grid Layout)
+================== */
+#organizational-strength {
+    padding: 60px 0;
+    background-color: var(--background-light);
+    /* Placeholder for background image */
+    /* background: url('YOUR_BACKGROUND_IMAGE_URL') fixed center center; */
+    /* background-size: cover; */
+    /* position: relative; */
+}
+
+/* Grid Card Styling */
+.strength-card {
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.strength-card:hover {
+    transform: translateY(-5px);
+}
+
+.strength-card h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+}
+
+/* Partners Card Specific Styling */
+.partner-bg {
+    /* Background for partners column - dark, professional feel */
+    background-color: #1a293f; 
+    /* background-image: url('YOUR_PARTNER_GRID_BACKGROUND_IMAGE_URL'); */
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.partner-logo {
+    max-width: 100px; /* Adjust size of partner logos */
+    height: auto;
+    filter: brightness(0) invert(1); /* Makes logos white for contrast */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.logo-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Accreditation Card Specific Styling */
+.accreditation-bg {
+    /* Background for accreditation column - vibrant brand color */
+    background: linear-gradient(135deg, var(--primary-color) 0%, #38ef7d 100%); 
+    /* background-image: url('YOUR_ACCREDITATION_GRID_BACKGROUND_IMAGE_URL'); */
+}
+
+.accreditation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accreditation-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.accreditation-item .check-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.accreditation-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    border: none;
+}
+
+.accreditation-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ==================
+  04. IT Training Section
+================== */
+#it-training {
+    padding: 60px 0;
+    background: #fff;
+}
+
+#it-training .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+#it-training .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#it-training .content ul li {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#it-training .content ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: var(--primary-color);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.rounded-corners {
+    border-radius: 8px;
+}
+
+/* Training Partners Card */
+.training-partners-card {
+    background: var(--background-light);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eef2f8;
+    height: 100%;
+}
+
+.training-partners-card h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.training-partners-card p {
+    font-size: 15px;
+    color: #5e7290;
+    margin-bottom: 30px;
+}
+
+.partners-grid-small {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.partner-box {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.partner-box h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+.partner-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    #about-header {
+        padding: 90px 0 50px 0;
+    }
+    .logos-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 logos per row on medium screens */
+    }
+}
+@media (max-width: 767px) {
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 logos per row on small screens */
+        gap: 20px;
+    }
+    .partners-grid-small {
+        grid-template-columns: 1fr; /* 1 column on mobile for training partners */
+    }
+}
+
+/*--------------------------------------------------------------
+# About/Strength Section (Revamped)
+--------------------------------------------------------------*/
+.about-strength {
+  padding: 60px 0;
+  /* section-bg class will apply the light background color */
+}
+
+.about-strength h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #37517e; /* Secondary dark color */
+  margin-bottom: 20px;
+}
+
+.about-strength .fst-italic {
+    font-size: 16px;
+    color: #5e7290;
+    margin-bottom: 25px;
+}
+
+.about-strength ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-strength ul li {
+  padding: 10px 0 10px 30px;
+  display: flex;
+  position: relative;
+  font-size: 15px;
+  color: #444444;
+}
+
+.about-strength ul li + li {
+  margin-top: 5px;
+}
+
+.about-strength ul i {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  color: #47b2e4; /* Primary blue color for icons */
+}
+
+/* Ensure the image placeholder scales correctly and has margin if needed */
+.about-strength img {
+  max-height: 400px;
+  margin-top: 20px;
+}
+
+/* Reusing the primary button style for the "Learn More About Us" link */
+.about-strength .btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4; /* Primary blue color */
+}
+
+.about-strength .btn-get-started:hover {
+  background: #209dd8; /* Slightly darker blue on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 991px) {
+  /* On mobile, stack content above the image (order-2) */
+  .about-strength .order-lg-1 {
+    margin-top: 30px; 
+  }
+}
+
+/*--------------------------------------------------------------
+# IT Training & Skills Section
+--------------------------------------------------------------*/
+/* Using color variables for consistency */
+:root {
+  --primary-color: #47b2e4;
+  --secondary-color: #37517e;
+  --background-light: #f7f9fc;
+}
+
+.it-training {
+    padding: 60px 0;
+}
+
+.it-training h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.it-training .fst-italic {
+    color: #5e7290;
+    margin-bottom: 20px;
+}
+
+/* Image Styling: Makes it smaller and applies rounded borders */
+.it-training .content img {
+    /* Makes the image about 90% of its column width and centers it */
+    max-width: 90%; 
+    display: block; 
+    margin: 0 auto 20px auto; 
+    
+    height: auto;
+    
+    /* Apply a distinct rounded border and soft shadow */
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styling */
+.it-training ul {
+  list-style: none;
+  padding: 0;
+}
+
+.it-training ul li {
+  padding: 8px 0 8px 30px;
+  display: flex;
+  position: relative;
+  font-size: 15px;
+  color: #444444;
+}
+
+.it-training ul i {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  color: var(--primary-color);
+}
+
+/* Training Partners Card Styling (Right Column) */
+.training-partners-card {
+    background: var(--background-light); 
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eef2f8;
+    height: 100%; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.training-partners-card h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color); /* Blue underline */
+    padding-bottom: 10px;
+}
+
+.training-partners-card p {
+    font-size: 15px;
+    color: #5e7290;
+    margin-bottom: 30px;
+}
+
+.partners-grid-small {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+.partner-box {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.partner-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.partner-box .partner-icon {
+    font-size: 35px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.partner-box h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Section (Restyled)
+--------------------------------------------------------------*/
+/* Define CSS Variables for the new colors, assuming existing primary/secondary */
+:root {
+  --primary-color: #47b2e4;    /* Blue (Assuming existing branding) */
+  --secondary-color: #37517e;  /* Dark Navy (Assuming existing branding) */
+  --background-light: #f7f9fc; /* Light Background (Assuming existing branding) */
+  
+  /* New Colors for Cards */
+  --orange-card-bg: #fff0e0;   /* Light Orange Background */
+  --orange-icon-color: #ff9900; /* Bright Orange Accent */
+}
+
+.contact {
+    padding: 100px 0 60px 0; /* Increased top padding for better heading spacing */
+}
+
+/* 1. Section Title Styling */
+.contact .section-title {
+    padding-bottom: 50px; /* Increased space below the heading/underline */
+}
+
+.contact .section-title h2 {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.contact .section-title p {
+    color: #5e7290;
+    font-size: 16px;
+    margin-top: 15px; /* Spacing for the introductory paragraph */
+}
+
+/* 2. Map Container Styling */
+.contact .info-map-container {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.contact .info-map-container h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color); /* Add a blue underline for map titles */
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.contact .info-map-container p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.contact iframe {
+    border-radius: 8px;
+}
+
+/* 3. General Contact Card Styling */
+.contact-info-card {
+    padding: 30px; /* More padding for a bigger card */
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent; /* Ensure border doesn't suddenly appear on hover */
+}
+
+.contact-info-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* General subtle shadow lift on hover */
+}
+
+.contact-info-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    display: block; 
+}
+
+.contact-info-card .info-item {
+    margin-bottom: 15px;
+}
+
+.contact-info-card .info-item p {
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #444444;
+}
+
+/* 4. Color Specific Cards (Only Orange remains) */
+
+/* --- Orange Card for Addresses & Contact --- */
+.contact-card-orange {
+    background-color: var(--orange-card-bg); 
+    border-left: 5px solid var(--orange-icon-color); /* Left border stripe */
+}
+.contact-card-orange h4 {
+    color: var(--secondary-color);
+    border-bottom: 1px dashed var(--orange-icon-color); /* Orange dashed underline */
+}
+.contact-card-orange .info-item i {
+    font-size: 20px;
+    color: var(--orange-icon-color); 
+    margin-right: 15px;
+    background: #fff5e8; /* Very light orange background for icon circle */
+    border-radius: 50%;
+    padding: 8px;
+    line-height: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Link Styling for the email/phone inside the orange card */
+.contact-card-orange .info-item a {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.contact-card-orange .info-item a:hover {
+    color: var(--orange-icon-color);
+    text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Top Bar (New Section - INSIDE Header) - THIN STRIP
+--------------------------------------------------------------*/
+#topbar {
+  background: #37517e; /* Dark Navy Color */
+  color: #fff;
+  height: 22px; /* Increased height for a slightly less thin strip */
+  font-size: 12px; /* Standard font size for a good fit */
+  line-height: 22px; /* MATCHES height for perfect vertical centering */
+  overflow: hidden; 
+  padding: 0; 
+}
+
+/* Use padding on the inner container to control vertical space */
+#topbar .container {
+    padding: 0 15px; 
+    height: 100%; 
+}
+
+#topbar .contact-info {
+    font-weight: 500;
+    height: 100%;
+}
+
+#topbar .contact-info a {
+  color: #fff;
+  transition: 0.3s;
+  padding: 0 8px;
+  display: flex;
+  align-items: center; 
+  height: 100%; 
+}
+
+#topbar .contact-info a:hover {
+  color: #47b2e4; /* Primary Blue on hover */
+}
+
+#topbar .contact-info i {
+  line-height: 0;
+  color: #47b2e4; /* Primary Blue for icons */
+  font-size: 14px; /* Slightly larger icons to match the new height */
+  margin-right: 5px;
+}
+
+/* Hides the long address on screens smaller than 1200px to prevent text wrapping/vertical expansion */
+@media (max-width: 1200px) {
+    #topbar .contact-info .d-lg-flex {
+        display: none !important; 
+    }
+}
+
+/* Mobile Adjustments for Top Bar */
+@media (max-width: 991px) {
+  #topbar {
+    height: 22px; 
+    font-size: 11px; 
+    line-height: 22px; 
+  }
+  #topbar .contact-info a {
+      padding: 0 5px;
+      font-size: 11px; 
+  }
+  #topbar .contact-info i {
+      font-size: 13px;
+      margin-right: 4px;
+  }
+}
+
+/* Note: Ensure your #header and #header.header-scrolled styles (from the previous step) are 
+also in place to handle the sticky scroll behavior correctly, especially the part that 
+hides the topbar when scrolled:
+
+#header.header-scrolled #topbar {
+    display: none !important;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s;
+}
+/*--------------------------------------------------------------
+# Header & Sticky Scroll Fix
+--------------------------------------------------------------*/
+
+/* Base Header Styling - Set background to match non-scrolled state */
+#header {
+    transition: all 0.5s;
+    z-index: 998;
+    background: #ffffff; /* Default background is white */
+    padding: 0; 
+}
+
+/* Adjust header padding for the main navbar area to make it significantly taller (e.g., 25px top/bottom) */
+#header .container {
+    padding-top: 25px; /* Increased padding top */
+    padding-bottom: 25px; /* Increased padding bottom */
+}
+
+/* FIX: Scrolled Header White Background & Black Text */
+/* When the 'header-scrolled' class is added (by your JavaScript scroll function) */
+#header.header-scrolled {
+    padding: 0; 
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); 
+}
+
+/* The topbar itself is 30px tall (from your provided CSS). The main header section will now be 50px tall (25px * 2) + content. */
+
+/* Hide the topbar completely when the user scrolls down, making the header compact */
+#header.header-scrolled #topbar {
+    display: none !important;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s;
+}
+
+
+/* Adjust the main navbar section inside the header when scrolled (compact mode) */
+#header.header-scrolled .container {
+    padding-top: 10px; /* Keep this compact when scrolled */
+    padding-bottom: 10px; /* Keep this compact when scrolled */
+}
+
+/* Change Navbar links to black when scrolled */
+#header.header-scrolled .navbar a, 
+#header.header-scrolled .navbar a:focus {
+    color: #000000 !important; 
+}
+
+/* Set hover/active colors to use your primary blue */
+#header.header-scrolled .navbar .nav-link.active, 
+#header.header-scrolled .navbar .nav-link:hover,
+#header.header-scrolled .navbar .nav-link:focus:hover {
+    color: #47b2e4 !important; /* Primary blue for hover/active visibility */
+}
+
+/*--------------------------------------------------------------
+# Content Spacing for Fixed Header (ULTRA-AGGRESSIVE FIX)
+--------------------------------------------------------------*/
+/* Target the element directly after the fixed header to push content down. */
+.content-start-spacer {
+    /* Use a massive padding value (200px) to guarantee clearance of the fixed header on desktop. */
+    padding-top: 200px !important; 
+    
+    /* Using a generous negative margin to pull the section up and prevent the page from having 
+       too much unnecessary scrollable space above the heading. */
+    margin-top: -100px !important; 
+}
+
+/* Mobile Adjustment (for screens where the header is smaller) */
+@media (max-width: 991px) {
+    .content-start-spacer {
+        /* Adjusted mobile padding to ensure it still clears the header when collapsed */
+        padding-top: 120px !important; 
+        margin-top: -60px !important; 
+    }
+}

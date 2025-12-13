@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fibre Coverage Check - Vhembe Connect</title>
+    <meta
+      content="Check if your exact location has Fibre or Fixed Wireless internet coverage with Vhembe Connect."
+      name="description"
+    />
+    <link href="assets/img/2.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Jost:400,500,600,700|Poppins:400,500,600,700"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/coverage.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header" class="fixed-top">
+      <section id="topbar" class="d-flex align-items-center">
+        <div
+          class="container d-flex justify-content-center justify-content-md-between"
+        >
+          <div class="contact-info d-flex align-items-center">
+            <i
+              class="bi bi-geo-alt-fill d-none d-lg-flex align-items-center"
+            ></i>
+            <span class="d-none d-lg-flex ms-1 me-4"
+              >Head Office: 1st Floor, 61 Katherine Street, Sandton, 2196</span
+            >
+
+            <i class="bi bi-envelope d-flex align-items-center me-1"></i>
+            <a href="mailto:jrngomane@nbscc.co.za" class="me-4"
+              >E-mail: jrngomane@nbscc.co.za</a
+            >
+
+            <i class="bi bi-phone d-flex align-items-center me-1"></i>
+            <a href="tel:0731824536">Cell: 073 182 4536</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+          <a href="index.html" class="d-flex align-items-center">
+            <img
+              src="assets/img/vhembe.png"
+              alt="Vhembe Connect Logo"
+              class="img-fluid me-2"
+            />
+          </a>
+        </h1>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li>
+              <a class="nav-link scrollto" href="/about-us.html">About Us</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/pricing-packages.html"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/check-coverage.html"
+                >Check Coverage</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/contact-us.html"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a class="btn-get-started scrollto" href="/apply.html">Apply </a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section id="coverage-hero" class="d-flex align-items-center">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+              <h1>Instant Coverage Check</h1>
+              <h2>
+                Find out if Vhembe Connect Fibre or Wireless is available at
+                your location.
+              </h2>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 col-md-10">
+              <div
+                class="coverage-search-box"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <form id="coverageCheckForm" onsubmit="checkCoverage(event)">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      id="addressInput"
+                      class="form-control coverage-input"
+                      placeholder="Enter your street address, suburb, or town (e.g., Polokwane)"
+                      list="areaSuggestions"
+                      required
+                    />
+                    <datalist id="areaSuggestions">
+                      <option value="Polokwane Central, Limpopo"></option>
+                      <option value="Malamulele, Vhembe"></option>
+                      <option value="De Deur, Walkerfruit Farms"></option>
+                      <option value="Thohoyandou Block G"></option>
+                      <option value="Louis Trichardt"></option>
+                      <option value="Giyani"></option>
+                    </datalist>
+                    <button class="btn btn-primary coverage-btn" type="submit">
+                      <i class="bi bi-search me-2"></i> Check Coverage
+                    </button>
+                  </div>
+                </form>
+                <div class="coverage-note">
+                  <i class="bi bi-map"></i> We provide coverage across Limpopo,
+                  Vhembe, and select Mpumalanga regions.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="coverage-results" class="coverage-results">
+        <div class="container" data-aos="fade-up">
+          <div class="row content">
+            <div class="col-lg-6 mb-4 mb-lg-0" id="dynamicResultContainer">
+              <div class="info-box neutral-box">
+                <i class="bi bi-geo-alt-fill neutral-icon"></i>
+                <h4>Ready to Find Your Connection?</h4>
+                <p>
+                  Enter your detailed address in the search bar above. We will
+                  instantly check our live Fibre and Fixed Wireless network maps
+                  for availability in your area.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div
+                class="map-placeholder"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <p class="mt-3 text-center text-muted">
+                  A representation of our expanding network map.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-lg-12">
+              <div class="section-title">
+                <h2>What Happens Next?</h2>
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div
+                class="icon-box-small"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="icon"><i class="bi bi-check-circle"></i></div>
+                <h4>Coverage Confirmed</h4>
+                <p>
+                  If Fibre is available, you can instantly select a package and
+                  apply online. Installation is scheduled immediately.
+                </p>
+                <a href="pricing-packages.html" class="btn btn-link"
+                  >View Pricing</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div
+                class="icon-box-small"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="icon"><i class="bi bi-wifi"></i></div>
+                <h4>Fibre Coming Soon</h4>
+                <p>
+                  If Fibre is in progress, we'll take your details and contact
+                  you the moment our network goes live in your suburb.
+                </p>
+                <a href="index.html#contact" class="btn btn-link"
+                  >Submit Interest</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div
+                class="icon-box-small"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="icon"><i class="bi bi-broadcast"></i></div>
+                <h4>No Fibre? Try Wireless!</h4>
+                <p>
+                  If Fibre is unavailable, we will check for Fixed Wireless
+                  (SkyFibre) coverage, which is perfect for rural and remote
+                  areas.
+                </p>
+                <a
+                  href="pricing-packages.html#skyfibre-pricing"
+                  class="btn btn-link"
+                  >View SkyFibre</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-logo-col">
+              <div class="footer-info">
+                <a href="index.html" class="logo-link">
+                  <img
+                    src="assets/img/vhembeconnect.png"
+                    alt="Vhembe Connect Logo"
+                    class="img-fluid footer-logo"
+                  />
+                </a>
+                <div class="social-links mt-4">
+                  <a
+                    href="https://wa.me/27731824536"
+                    target="_blank"
+                    class="whatsapp"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
+                  <a href="#" target="_blank" class="facebook"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a href="#" target="_blank" class="linkedin"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Primary Contact</h4>
+              <ul class="footer-contact-list">
+                <li>
+                  <i class="bi bi-phone"></i> **Cell (24/7):** 073 182 4536
+                </li>
+                <li>
+                  <i class="bi bi-envelope"></i> **Email:**
+                  jrngomane@nbscc.co.za
+                </li>
+                <li>
+                  <i class="bi bi-globe"></i> **Web:** VhembeConnect.co.za
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Head Office</h4>
+              <p class="footer-address">
+                <strong>VHEMBE CONNECT (PTY) LTD</strong><br />
+                1st Floor, 61 Katherine Street<br />
+                Sandton, 2196<br />
+                South Africa
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Rural Operations</h4>
+              <p class="footer-address">
+                STAND NUMBER 267<br />
+                BUNGENI VILLAGE<br />
+                NGHONYAMA, LIMPOPO<br />
+                0960, South Africa
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Vhembe Connect</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by
+          <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function checkCoverage(event) {
+        event.preventDefault(); // Stop the form from submitting normally
+
+        const inputElement = document.getElementById("addressInput");
+        const resultsContainer = document.getElementById(
+          "dynamicResultContainer"
+        );
+        // Normalize the input for case-insensitive checking
+        const userAddress = inputElement.value.toLowerCase().trim();
+
+        let messageHtml = "";
+
+        // Define general keywords for coverage simulation (less specific, more regional)
+        // Keywords that trigger a positive Fibre result
+        const fibreAreas = [
+          "polokwane",
+          "louis trichardt",
+          "thohoyandou",
+          "sandton",
+          "de deur",
+        ];
+        // Keywords that trigger a Wireless/Manual Check result
+        const wirelessAreas = [
+          "walkerfruit farms",
+          "malamulele",
+          "giyani",
+          "rural",
+          "vhembe",
+          "limpopo",
+        ];
+
+        // --- Generalized Coverage Logic ---
+        let isFibre = fibreAreas.some((area) => userAddress.includes(area));
+        let isWireless = wirelessAreas.some((area) =>
+          userAddress.includes(area)
+        );
+
+        if (isFibre) {
+          // Success: Fibre Found
+          messageHtml = `
+                    <div class="info-box success-box" data-aos="fade-up">
+                        <i class="bi bi-wifi success-icon"></i>
+                        <h4>✅ Fibre Coverage Confirmed!</h4>
+                        <p>
+                            Great news! We have **Fibre** and **Fixed Wireless** coverage near **${inputElement.value}**. 
+                            You are eligible for our fastest packages.
+                        </p>
+                        <a href="pricing-packages.html#xfibre-pricing" class="btn btn-success mt-3">View Fibre Packages</a>
+                    </div>
+                `;
+        } else if (isWireless) {
+          // Warning: No Fibre, but Wireless is highly likely or requires manual check
+          messageHtml = `
+                    <div class="info-box info-box-warning" data-aos="fade-up">
+                        <i class="bi bi-broadcast info-icon"></i>
+                        <h4>📡 Fixed Wireless (SkyFibre) Likely!</h4>
+                        <p>
+                            Fibre is not yet confirmed for **${inputElement.value}**, but our **SkyFibre Fixed Wireless** solution 
+                            is highly available in this area.
+                        </p>
+                        <a href="pricing-packages.html#skyfibre-pricing" class="btn btn-warning mt-3">View SkyFibre Packages</a>
+                    </div>
+                `;
+        } else {
+          // Danger: General No Coverage / Require Manual Check
+          messageHtml = `
+                    <div class="info-box info-box-danger" data-aos="fade-up">
+                        <i class="bi bi-map-fill danger-icon"></i>
+                        <h4>❌ No Instant Coverage Match.</h4>
+                        <p>
+                            We need to perform a manual check for **${inputElement.value}**. Please use the form below to submit your details 
+                            so our team can confirm availability within 24 hours.
+                        </p>
+                        <a href="index.html#contact" class="btn btn-danger mt-3">Request Manual Check</a>
+                    </div>
+                `;
+        }
+
+        // Update the results container and scroll
+        resultsContainer.innerHTML = messageHtml;
+        const resultsSection = document.getElementById("coverage-results");
+        resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    </script>
+
+   
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

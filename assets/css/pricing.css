@@ -1,0 +1,278 @@
+/*--------------------------------------------------------------
+# Pricing Page Specific Styles (pricing.css)
+# Makro-style E-commerce Product Card Redesign
+--------------------------------------------------------------*/
+
+/* ==================
+  1. PRICING HERO SECTION (Updated for background image)
+================== */
+#pricing-hero {
+    width: 100%;
+    height: 90vh;
+    margin-top: 70px;
+    /* UPDATED: Changed from solid color to a background image */
+    background: url("https://static.vecteezy.com/system/resources/thumbnails/010/790/729/small_2x/abstract-background-dark-blue-with-modern-concept-vector.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 60px;
+}
+
+#pricing-hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #ffffff;
+}
+
+#pricing-hero h2 {
+    color: #4f5f7f;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Custom button for Fibre */
+#pricing-hero .fibre-btn {
+    background: #fff;
+    color: #37517e;
+    border: 2px solid #37517e;
+    transition: 0.3s;
+}
+
+#pricing-hero .fibre-btn:hover {
+    background: #37517e;
+    color: #fff;
+}
+
+#pricing-hero .pricing-hero-img img {
+    max-width: 100%;
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+    #pricing-hero {
+        text-align: center;
+        height: auto;
+        padding: 100px 0 60px 0;
+    }
+    #pricing-hero .pricing-hero-img {
+        text-align: center;
+    }
+    #pricing-hero .pricing-hero-img img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #pricing-hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    #pricing-hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+/* ==================
+  2. E-COMMERCE PRODUCT CARD STYLING (MAKRO STYLE)
+================== */
+.pricing {
+    padding: 60px 0;
+}
+
+.pricing.grey-bg {
+    background: #f4f6f8; /* Very light grey for section separation */
+}
+
+.pricing .section-title {
+    margin-bottom: 50px;
+}
+
+.pricing .section-title h2 {
+    font-size: 32px;
+    color: #37517e;
+    font-weight: 600;
+}
+
+.pricing .box {
+    /* Significantly reduced padding for compact card */
+    padding: 15px; 
+    background: #fff;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eef0f2;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08); /* Lighter, tighter shadow */
+    transition: 0.3s;
+    height: 100%; /* Ensures all cards are the same height */
+    margin-bottom: 20px; /* Space between cards in row and stack */
+}
+
+.pricing .box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+.pricing .box .card-header-icon {
+    font-size: 28px;
+    color: #47b2e4;
+    margin-bottom: 10px;
+}
+
+.pricing .box h3 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #37517e;
+    min-height: 40px; /* Ensure title space consistency */
+}
+
+/* Price is the most prominent feature */
+.pricing .box h4 {
+    font-size: 32px;
+    color: #37517e;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    margin: 10px 0;
+}
+
+.pricing .box h4 sup {
+    font-size: 18px;
+    top: -10px;
+    margin-right: 2px;
+}
+
+.pricing .box h4 small {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+/* Speed Tag Styling - Concise and clear */
+.pricing .speed-tag {
+    display: block;
+    background: #f7f9fc;
+    color: #37517e;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing .speed-tag small {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    margin-left: 3px;
+}
+
+/* Single feature line for quick reference */
+.pricing .box .feature-line {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 15px;
+    min-height: 30px;
+}
+
+
+/* Button Styling (Clear Call to Action) */
+.pricing .box .buy-btn {
+    display: block; /* Full width button */
+    padding: 10px 0;
+    border-radius: 4px; /* Squared off for e-commerce feel */
+    color: #fff;
+    background: #47b2e4;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 1px solid #47b2e4;
+}
+
+.pricing .box .buy-btn:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+/* Featured Plan Styling (XFibre Highlight) */
+.pricing .box.featured {
+    border-color: #47b2e4;
+    box-shadow: 0px 5px 25px rgba(71, 178, 228, 0.2);
+    /* No background change to keep the Makro-like clean look, but border/shadow highlight */
+}
+
+/* Featured Plan Styling (TruFibre Highlight) - Custom Color */
+.pricing .box.featured-trufibre {
+    border-color: #28a745; /* Green highlight for economical choice */
+    box-shadow: 0px 5px 25px rgba(40, 167, 69, 0.2);
+}
+.pricing .box.featured-trufibre .card-header-icon {
+    color: #28a745;
+}
+.pricing .box.featured-trufibre .buy-btn {
+    background: #28a745;
+    border-color: #28a745;
+}
+.pricing .box.featured-trufibre .buy-btn:hover {
+    background: #1e7e34;
+    border-color: #1e7e34;
+}
+
+/* Featured Plan Styling (SkyFibre Highlight) - Custom Color */
+.pricing .box.featured-skyfibre {
+    border-color: #ffc107; /* Yellow/Gold highlight */
+    box-shadow: 0px 5px 25px rgba(255, 193, 7, 0.2);
+}
+.pricing .box.featured-skyfibre .card-header-icon {
+    color: #ffc107;
+}
+.pricing .box.featured-skyfibre .buy-btn {
+    background: #ffc107;
+    border-color: #ffc107;
+    color: #37517e; /* Dark text on light background */
+}
+.pricing .box.featured-skyfibre .buy-btn:hover {
+    background: #e0a800;
+    border-color: #e0a800;
+    color: #fff;
+}
+
+
+/* Disclaimer */
+.pricing-disclaimer {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.6;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #47b2e4;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ==================
+  3. MOBILE RESPONSIVENESS FIXES
+================== */
+@media (max-width: 991px) {
+    /* Ensure 2 columns on tablet and 1 on phone for max legibility */
+    .row > [class*='col-lg-'],
+    .row > [class*='col-md-'] {
+        width: 50%; /* 2 cards per row on tablets/mid-screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .row > [class*='col-lg-'],
+    .row > [class*='col-md-'] {
+        width: 100%; /* 1 card per row on phones */
+    }
+
+    .pricing .box {
+        padding: 20px; /* A little more padding on tiny screens */
+    }
+}

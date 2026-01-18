@@ -2574,25 +2574,90 @@ ul li .bi-check-circle {
   color: #003a29;
 }
 
-/* ======================
-   MOBILE RESPONSIVENESS
-   ====================== */
+/* ====================================================
+   MOBILE RESPONSIVENESS (POLISHED & ACCURATE)
+   ==================================================== */
+
+/* Medium Devices (Tablets/Small Laptops) */
 @media (max-width: 991px) {
   .vhembe-elo-hero {
-    padding-top: 90px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     text-align: center;
+    min-height: auto; /* Allow section to grow with content */
   }
 
   .elo-hero-title {
-    font-size: 40px;
+    font-size: 38px; /* Scaled down from 56px */
+  }
+
+  .elo-subtext {
+    margin: 0 auto 25px; /* Center the description */
+    font-size: 18px;
+  }
+
+  .elo-services {
+    justify-content: center; /* Center the pills */
   }
 
   .hero-img-wrapper {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .hero-green-accent {
-    width: 5px;
+    width: 4px; /* Thinner accent for smaller screens */
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 768px) {
+  .elo-hero-title {
+    font-size: 32px; /* Even smaller for phones */
+    line-height: 1.3;
+  }
+
+  .btn-elo-outline {
+    margin-left: 0;
+    margin-top: 15px;
+    display: block; /* Stack buttons on small phones */
+    width: 100%; /* Full width buttons for easier tapping */
+  }
+
+  .btn-elo-primary {
+    display: block;
+    width: 100%;
+  }
+
+  .elo-services span {
+    font-size: 12px; /* Smaller pills */
+    padding: 5px 12px;
+  }
+}
+
+/* Extra Small Devices (Tiny Screens) */
+@media (max-width: 480px) {
+  .vhembe-elo-hero {
+    padding-top: 80px;
+  }
+
+  .elo-hero-title {
+    font-size: 28px;
+  }
+
+  .elo-subtext {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .elo-services {
+    margin-bottom: 20px; /* Space between pills and buttons */
+    justify-content: center;
+  }
+  
+  .elo-services span {
+    font-size: 13px;
+    padding: 5px 12px;
   }
 }
 

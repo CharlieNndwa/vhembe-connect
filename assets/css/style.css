@@ -5801,11 +5801,7 @@ hides the topbar when scrolled:
   transition: all 0.4s ease-in-out;
 }
 
-/* Ensure Logo is prominent */
-#header .logo img {
-  max-height: 95px !important;
-  transition: transform 0.3s ease;
-}
+
 
 #header .logo img:hover {
   transform: scale(1.08) rotate(-2deg);
@@ -5897,5 +5893,40 @@ hides the topbar when scrolled:
   .navbar .btn-get-started {
     margin: 15px 0 0 0;
     text-align: center;
+  }
+}
+
+/* --- LOGO SIZE MAXIMIZATION --- */
+#header .logo {
+  line-height: 0; /* Removes extra vertical spacing from the H1 tag */
+}
+
+#header .logo img {
+  /* Increased from 95px to 110px for maximum impact */
+  max-height: 40px !important; 
+  height: auto;
+  width: auto;
+  
+  /* Ensuring the image doesn't get squashed */
+  display: block;
+  object-fit: contain;
+  
+  /* Smooth interaction */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to make it feel premium */
+#header .logo img:hover {
+  transform: scale(1.1); /* Slightly larger zoom */
+  filter: drop-shadow(0 5px 15px rgba(40, 167, 69, 0.2)); /* Vhembe Green Glow */
+}
+
+/* Mobile Adjustment - Logos can't be too big on phones or they block the menu */
+@media (max-width: 991px) {
+  #header .logo img {
+    max-height: 75px !important; 
+  }
+  #header {
+    padding: 8px 0; /* Tighten header padding on mobile */
   }
 }

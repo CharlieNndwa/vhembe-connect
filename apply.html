@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
 
     <title>Vhembe Connect</title>
     <meta content="" name="description" />
-    <meta content="" name="RenaCorp" />
+    <meta content="" name="Vhembe Connect" />
 
     <!-- Favicons -->
     <link href="assets/img/2.png" rel="icon" />
@@ -41,6 +41,11 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
@@ -53,7 +58,7 @@
             <img
               src="assets/img/vhembe.png"
               alt="Vhembe Connect Logo"
-              class="img-fluid me-2"
+              class="main-logo-img"
             />
           </a>
         </h1>
@@ -65,7 +70,7 @@
               <a class="nav-link scrollto" href="/about-us.html">About Us</a>
             </li>
             <li>
-              <a class="nav-link scrollto" href="/pricing-packages.html"
+              <a class="nav-link scrollto" href="/wifi-packages.html"
                 >Wi-Fi Packages</a
               >
             </li>
@@ -138,132 +143,176 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info-box-vhembe">
-                <img
-                  src="https://img.freepik.com/free-photo/young-woman-struggling-with-weak-internet-connection-home_482257-120196.jpg?semt=ais_hybrid&w=740&q=80"
-                  alt="Support"
-                  class="img-fluid rounded-image mb-4"
-                />
-                <div class="address">
-                  <i class="bi bi-truck"></i>
-                  <h4>Delivery & Installation</h4>
-                  <p>
-                    We deliver your router and perform a full signal test
-                    on-site.
-                  </p>
-                </div>
-                <div class="email mt-4">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email Us</h4>
-                  <p>admin@vhembeconnect.co.za</p>
+          <div class="row mb-5" data-aos="fade-up">
+            <div class="col-12">
+              <div class="info-banner-horizontal">
+                <div class="banner-flex-container">
+                  <div class="banner-image-box">
+                    <img
+                      src="https://img.freepik.com/free-photo/young-woman-struggling-with-weak-internet-connection-home_482257-120196.jpg?semt=ais_hybrid&w=740&q=80"
+                      alt="Support"
+                      class="img-fluid"
+                    />
+                    <div class="status-badge-mini">
+                      <i class="bi bi-broadcast"></i> High Speed
+                    </div>
+                  </div>
+
+                  <div class="banner-content-box">
+                    <div class="banner-header">
+                      <h3>Experience Seamless Connectivity</h3>
+                      <p>
+                        Tired of buffering? Vhembe Connect brings the future of
+                        internet to your doorstep.
+                      </p>
+                    </div>
+
+                    <div class="banner-features">
+                      <div class="feature-item-inline">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Signal Testing</span>
+                      </div>
+                      <div class="feature-item-inline">
+                        <i class="bi bi-person-badge"></i>
+                        <span>Professional Setup</span>
+                      </div>
+                      <div class="feature-item-inline">
+                        <i class="bi bi-headset"></i>
+                        <span>24/7 Priority</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form id="vhembe-order-form" class="php-email-form">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Name & Surname</label>
-                    <input
-                      type="text"
-                      name="user_name"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
+          <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+              <div class="form-wrapper-modern">
+                <form id="vhembe-order-form" class="form-container-vertical">
+                  <div class="form-header-sleek text-center">
+                    <span class="step-indicator">Step 1 of 1</span>
+                    <h2>Ready to get started?</h2>
+                    <p>
+                      Please provide your information to process your
+                      application.
+                    </p>
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="id_num">ID Number</label>
-                    <input
-                      type="text"
-                      name="user_id"
-                      class="form-control"
-                      id="id_num"
-                      required
-                    />
-                  </div>
-                </div>
 
-                <div class="row mt-3">
-                  <div class="form-group col-md-6">
-                    <label for="email">Your Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="user_email"
-                      id="email"
-                      required
-                    />
+                  <div class="row mt-4">
+                    <div class="col-md-6 form-group-vertical">
+                      <label for="name"
+                        ><i class="bi bi-person"></i> Full Name</label
+                      >
+                      <input
+                        type="text"
+                        name="user_name"
+                        class="form-control-sleek"
+                        id="name"
+                        placeholder="Charlie Nndwa"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 form-group-vertical">
+                      <label for="id_num"
+                        ><i class="bi bi-card-heading"></i> ID Number</label
+                      >
+                      <input
+                        type="text"
+                        name="customer_id"
+                        class="form-control-sleek"
+                        id="id_num"
+                        placeholder="South African ID"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 form-group-vertical">
+                      <label for="email"
+                        ><i class="bi bi-envelope-at"></i> Email</label
+                      >
+                      <input
+                        type="email"
+                        name="user_email"
+                        class="form-control-sleek"
+                        id="email"
+                        placeholder="name@gmail.com"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 form-group-vertical">
+                      <label for="phone"
+                        ><i class="bi bi-phone"></i> Mobile</label
+                      >
+                      <input
+                        type="tel"
+                        name="user_phone"
+                        class="form-control-sleek"
+                        id="phone"
+                        placeholder="072 277 7538"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 form-group-vertical">
+                      <label for="address"
+                        ><i class="bi bi-house-door"></i> Physical
+                        Address</label
+                      >
+                      <input
+                        type="text"
+                        name="user_address"
+                        class="form-control-sleek"
+                        id="address"
+                        placeholder="Unit, Street, Suburb"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 form-group-vertical">
+                      <label for="province"
+                        ><i class="bi bi-map"></i> Province</label
+                      >
+                      <select
+                        name="user_province"
+                        id="province"
+                        class="form-control-sleek"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Select Province
+                        </option>
+                        <option value="Limpopo">Limpopo</option>
+                        <option value="Gauteng">Gauteng</option>
+                        <option value="Mpumalanga">Mpumalanga</option>
+                        <option value="North West">North West</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 form-group-vertical">
+                      <label for="package"
+                        ><i class="bi bi-wifi"></i> Package</label
+                      >
+                      <select
+                        name="user_package"
+                        id="package"
+                        class="form-control-sleek"
+                        required
+                      >
+                        <option value="Uncapped Wifi">Uncapped Wifi</option>
+                        <option value="Unlimited Voice">Unlimited Voice</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="phone">Cellphone No.</label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      name="user_phone"
-                      id="phone"
-                      required
-                    />
-                  </div>
-                </div>
 
-                <div class="form-group mt-3">
-                  <label for="address">Residential Address</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="user_address"
-                    id="address"
-                    required
-                  />
-                </div>
-
-                <div class="row mt-3">
-                  <div class="form-group col-md-6">
-                    <label for="province">Province</label>
-                    <select
-                      name="user_province"
-                      id="province"
-                      class="form-control"
-                      required
+                  <div class="text-center mt-4">
+                    <button
+                      type="submit"
+                      id="submit-btn"
+                      class="btn-isp-primary w-100"
                     >
-                      <option value="" selected disabled>
-                        Select Province
-                      </option>
-                      <option value="Limpopo">Limpopo</option>
-                      <option value="Gauteng">Gauteng</option>
-                      <option value="Mpumalanga">Mpumalanga</option>
-                      <option value="North West">North West</option>
-                    </select>
+                      Submit Application <i class="bi bi-arrow-right"></i>
+                    </button>
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="package">Select Package</label>
-                    <select
-                      name="user_package"
-                      id="package"
-                      class="form-control"
-                      required
-                    >
-                      <option value="Uncapped Wifi">Uncapped Wifi</option>
-                      <option value="Unlimited Voice Minutes">
-                        Unlimited Voice Minutes
-                      </option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="my-3">
-                  <div id="status-msg"></div>
-                </div>
-                <div class="text-center">
-                  <button type="submit" id="submit-btn">
-                    Submit Application
-                  </button>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -358,59 +407,58 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
-      (function () {
-        // Replace with your actual EmailJS Public Key
-        emailjs.init("YOUR_PUBLIC_KEY");
-      })();
-
+    <script type="text/javascript">
       document
         .getElementById("vhembe-order-form")
         .addEventListener("submit", function (event) {
           event.preventDefault();
+
           const btn = document.getElementById("submit-btn");
-          btn.innerHTML = "Sending...";
+          btn.innerHTML = "Verifying...";
           btn.disabled = true;
 
-          // Send to admin@vhembeconnect.co.za
-          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
-            function () {
+          const serviceID = "service_qsh6l5t";
+          const templateID = "template_u24ejgv";
+          const publicKey = "8OICypifJYEiEf9fg";
+
+          // This specific structure fixes the "double user_id" conflict
+          emailjs.sendForm(serviceID, templateID, this, publicKey).then(
+            () => {
               Swal.fire({
                 title: "Success!",
-                text: "Your application has been submitted successfully.",
+                text: "Application submitted successfully!",
                 icon: "success",
-                confirmButtonColor: "#28a745",
               });
-              document.getElementById("vhembe-order-form").reset();
+              this.reset();
               btn.innerHTML = "Submit Application";
               btn.disabled = false;
             },
-            function (error) {
+            (err) => {
+              console.error("Payload Error:", err);
               Swal.fire({
-                title: "Error!",
-                text: "Something went wrong. Please try again.",
+                title: "Key Rejected",
+                text:
+                  "Error: " +
+                  err.text +
+                  ". If this persists, delete the EmailJS Service and recreate it.",
                 icon: "error",
               });
               btn.innerHTML = "Retry Submit";
               btn.disabled = false;
-            }
+            },
           );
         });
     </script>
 
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -53,14 +53,14 @@
             <img
               src="assets/img/vhembe.png"
               alt="Vhembe Connect Logo"
-              class="img-fluid me-2"
+              class="main-logo-img"
             />
           </a>
         </h1>
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto active" href="/">Home</a></li>
             <li>
               <a class="nav-link scrollto" href="/about-us.html">About Us</a>
             </li>
@@ -86,7 +86,9 @@
               >
             </li>
             <li>
-              <a class="btn-get-started scrollto" href="/apply.html">Apply </a>
+              <a class="btn-get-started scrollto text-white" href="/apply.html"
+                >Apply
+              </a>
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -269,44 +271,57 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script>
+      // Standard initialization
       (function () {
-        // Replace with your actual Public Key from EmailJS
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("8OICypifJYEiEf9fg");
       })();
 
       document
         .getElementById("notify-form")
         .addEventListener("submit", function (event) {
           event.preventDefault();
+
           const btn = document.getElementById("notify-btn");
           const originalText = btn.innerHTML;
 
           btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Saving...';
           btn.disabled = true;
 
-          // Send the notification request
-          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+          // Use your verified IDs
+          const serviceID = "service_qsh6l5t";
+          const templateID = "template_5wt1n8o"; // Double-check this in EmailJS dashboard
+          const publicKey = "8OICypifJYEiEf9fg";
+
+          // We pass the publicKey as the 4th argument for maximum stability
+          emailjs.sendForm(serviceID, templateID, this, publicKey).then(
             function () {
               Swal.fire({
-                title: "You are on the list!",
-                text: "We will notify admin@vhembeconnect.co.za and alert you as soon as we launch.",
+                title: "You're on the list!",
+                text:
+                  "We will notify you at " +
+                  document.querySelector('[name="user_email"]').value +
+                  " as soon as we launch.",
                 icon: "success",
-                confirmButtonColor: "#28a745",
-                timer: 4000,
+                confirmButtonColor: "#47b2e4",
               });
               document.getElementById("notify-form").reset();
               btn.innerHTML = originalText;
               btn.disabled = false;
             },
             function (error) {
+              // This will now log the EXACT reason in the console (F12)
+              console.error("EmailJS Detailed Error:", error);
+
               Swal.fire({
                 title: "Oops!",
-                text: "Registration failed. Please try again later.",
+                text:
+                  "Error: " +
+                  (error.text || "Check your Template ID or Public Key"),
                 icon: "error",
               });
               btn.innerHTML = "Try Again";
               btn.disabled = false;
-            }
+            },
           );
         });
     </script>

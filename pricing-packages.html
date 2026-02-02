@@ -47,55 +47,38 @@
 
   <body>
     <header id="header" class="fixed-top">
-      <section id="topbar" class="d-flex align-items-center">
-        <div
-          class="container d-flex justify-content-center justify-content-md-between"
-        >
-          <div class="contact-info d-flex align-items-center">
-            <i
-              class="bi bi-geo-alt-fill d-none d-lg-flex align-items-center"
-            ></i>
-            <span class="d-none d-lg-flex ms-1 me-4"
-              >Head Office: 1st Floor, 61 Katherine Street, Sandton, 2196</span
-            >
-
-            <i class="bi bi-envelope d-flex align-items-center me-1"></i>
-            <a href="mailto:jrngomane@nbscc.co.za" class="me-4"
-              >E-mail: jrngomane@nbscc.co.za</a
-            >
-
-            <i class="bi bi-phone d-flex align-items-center me-1"></i>
-            <a href="tel:0731824536">Cell: 073 182 4536</a>
-          </div>
-        </div>
-      </section>
-
       <div class="container d-flex align-items-center">
         <h1 class="logo me-auto">
           <a href="index.html" class="d-flex align-items-center">
             <img
               src="assets/img/vhembe.png"
               alt="Vhembe Connect Logo"
-              class="img-fluid me-2"
+              class="main-logo-img"
             />
           </a>
         </h1>
 
         <nav id="navbar" class="navbar">
-          <ul>
+          <ul class="nav-list-tight">
             <li><a class="nav-link scrollto active" href="/">Home</a></li>
             <li>
               <a class="nav-link scrollto" href="/about-us.html">About Us</a>
             </li>
             <li>
               <a class="nav-link scrollto" href="/pricing-packages.html"
-                >Pricing</a
+                >Wi-Fi Packages</a
               >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/support.html">Support</a>
             </li>
             <li>
               <a class="nav-link scrollto" href="/check-coverage.html"
                 >Check Coverage</a
               >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="/services.html">Services</a>
             </li>
             <li>
               <a class="nav-link scrollto" href="/contact-us.html"
@@ -168,9 +151,9 @@
                 <div class="card-header-icon"><i class="bi bi-box"></i></div>
                 <h3>XLite</h3>
                 <div class="speed-tag">
-                  10<small>Mbps</small> Down / 10<small>Mbps</small> Up
+                  4<small>Mbps</small> Down / 2<small>Mbps</small> Up
                 </div>
-                <h4><sup>R</sup>490<small>pm</small></h4>
+                <h4><sup>R</sup>280<small>pm</small></h4>
                 <p class="feature-line">Uncapped / Unshaped Service</p>
                 <a href="/apply.html" class="buy-btn">Apply Now</a>
               </div>
@@ -185,9 +168,9 @@
                 <div class="card-header-icon"><i class="bi bi-house"></i></div>
                 <h3>XBasic</h3>
                 <div class="speed-tag">
-                  20<small>Mbps</small> Down / 20<small>Mbps</small> Up
+                  6<small>Mbps</small> Down / 3<small>Mbps</small> Up
                 </div>
-                <h4><sup>R</sup>650<small>pm</small></h4>
+                <h4><sup>R</sup>330.25<small>pm</small></h4>
                 <p class="feature-line">Uncapped / Unshaped Service</p>
                 <a href="/apply.html" class="buy-btn">Apply Now</a>
               </div>
@@ -204,9 +187,9 @@
                 </div>
                 <h3>XBusiness</h3>
                 <div class="speed-tag">
-                  30<small>Mbps</small> Down / 30<small>Mbps</small> Up
+                  8<small>Mbps</small> Down / 3<small>Mbps</small> Up
                 </div>
-                <h4><sup>R</sup>850<small>pm</small></h4>
+                <h4><sup>R</sup>661.25<small>pm</small></h4>
                 <p class="feature-line">Uncapped / Unshaped Service</p>
                 <a href="/apply.html" class="buy-btn">Apply Now</a>
               </div>
@@ -221,15 +204,15 @@
                 <div class="card-header-icon"><i class="bi bi-star"></i></div>
                 <h3>XPro</h3>
                 <div class="speed-tag">
-                  50<small>Mbps</small> Down / 50<small>Mbps</small> Up
+                  10<small>Mbps</small> Down / 5<small>Mbps</small> Up
                 </div>
-                <h4><sup>R</sup>990<small>pm</small></h4>
+                <h4><sup>R</sup>914.25<small>pm</small></h4>
                 <p class="feature-line">Uncapped / Unshaped Service</p>
                 <a href="#" class="buy-btn">Apply Now</a>
               </div>
             </div>
 
-            <div
+            <!-- <div
               class="col-lg-4 col-md-6 mb-4"
               data-aos="fade-up"
               data-aos-delay="500"
@@ -246,9 +229,9 @@
                 <p class="feature-line">Uncapped / Unshaped Service</p>
                 <a href="/apply.html" class="buy-btn">Apply Now</a>
               </div>
-            </div>
+            </div> -->
 
-            <div
+            <!-- <div
               class="col-lg-4 col-md-6 mb-4"
               data-aos="fade-up"
               data-aos-delay="600"
@@ -264,7 +247,7 @@
                 <a href="/apply.html" class="buy-btn">Apply Now</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="pricing-disclaimer mt-5 text-center">
             <p>
@@ -279,7 +262,7 @@
           </div>
         </div>
       </section>
-      <section id="trufibre-pricing" class="pricing grey-bg">
+      <!-- <section id="trufibre-pricing" class="pricing grey-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>TruFibre Uncapped Packages</h2>
@@ -481,9 +464,10 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
-     <!-- ======= Footer ======= -->
+     
+    <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="footer-top">
         <div class="container">
@@ -517,9 +501,10 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Primary Contact</h4>
               <ul class="footer-contact-list">
-                <li><i class="bi bi-phone"></i> Cell (24/7): 073 182 4536</li>
+                 <li><i class="bi bi-phone"></i> 011 050 0794</li>
                 <li>
-                  <i class="bi bi-envelope"></i> Email: jrngomane@nbscc.co.za
+                  <i class="bi bi-envelope"></i>
+                  info@vhembeconnect.co.za
                 </li>
               </ul>
             </div>
@@ -537,9 +522,9 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Head Office: Limpopo</h4>
               <p class="footer-address">
-                STAND NUMBER 267<br />
-                BUNGENI VILLAGE<br />
-                NGHONYAMA, LIMPOPO<br />
+                Stand number 267<br />
+                Bungeni Village<br />
+                Nghonyama, Limpopo<br />
                 0960, South Africa
               </p>
             </div>
@@ -552,7 +537,6 @@
           &copy; Copyright <strong><span>Vhembe Connect</span></strong
           >. All Rights Reserved
         </div>
-        
       </div>
     </footer>
     <!-- End Footer -->    

@@ -6204,3 +6204,86 @@ hides the topbar when scrolled:
 .navbar .btn-white-text:hover {
   color: #ffffff !important;
 }
+
+/* Magic Hover for Map Containers */
+.magic-hover {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.magic-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(55, 81, 126, 0.2);
+}
+
+/* WhatsApp Badge Styling */
+.whatsapp-badge-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: relative;
+  border: 1px solid #eee;
+}
+
+/* Update this in your style.css */
+.badge-sleek {
+  width: 80px; /* Slightly larger to fit the PNG detail */
+  height: 80px;
+  background: #ffffff; /* White background to make the black PNG visible */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.wa-png-icon {
+  width: 70%; /* Size the PNG within the circle */
+  height: auto;
+  z-index: 2;
+  position: relative;
+}
+
+/* Maintain the "Glint" effect over the image */
+.badge-glint {
+  z-index: 3;
+}
+
+.btn-whatsapp-action {
+  background: #25d366;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 15px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-whatsapp-action:hover {
+  background: #128c7e;
+  transform: scale(1.05);
+  color: white;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20% { left: 150%; }
+  100% { left: 150%; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .whatsapp-badge-card { padding: 25px; }
+  .info-block { text-align: center; }
+  .info-item { justify-content: center; }
+}
